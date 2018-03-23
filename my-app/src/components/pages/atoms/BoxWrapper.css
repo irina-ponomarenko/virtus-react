@@ -1,0 +1,13 @@
+.BoxWrapper{
+    background: #2f3242;
+    display: inline-block;
+}
+.BoxWrapper:last-child{
+    margin-right: 0;
+    width: 100%;
+}
+.BoxWrapper--Margin{
+    margin-right: 25px;
+    width: 100%;
+}
+

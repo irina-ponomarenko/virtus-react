@@ -85,7 +85,7 @@ class Form extends  React.Component {
                                onChange={this.handleUserInput}/>
                     </div>
                     <div className={`form-group PasswordWrapper ${this.errorClass(this.state.formErrors.password)}`}>
-                        <i className="fas fa-unlock-alt"></i>
+                        <i className="fa fa-unlock-alt"></i>
                         <input type="password" name="password" placeholder="Password" className="Password"
                                value={this.state.password}
                                onChange={this.handleUserInput}/>

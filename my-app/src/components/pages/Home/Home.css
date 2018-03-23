@@ -1,0 +1,159 @@
+.WrapperPage{
+    background: #2a2c3b;
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+}
+.WrapperAllPage{
+    width: 100%;
+   margin: 72px 20px 0px 72px;
+}
+.Container{
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    background: #2f3242;
+    margin-right: 25px;
+}
+.WrapperBlock{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+.HeaderContainer{
+    line-height: 100px;
+    background: #3a3e52;
+}
+.HeaderContainer h2{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 300;
+    margin: 0;
+}
+.WrapperUserBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 25px;
+    border-bottom: 1px solid #505464;
+}
+.UserBlock{
+    display: flex;
+    align-items: center;
+}
+.WrapperUserBlock i{
+    font-size: 20px;
+    color: #9ea3b4;
+    cursor: pointer;
+}
+.IconUser{
+    margin-right: 25px;
+}
+.IconUser img{
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+}
+.TitleUser p{
+    color: #9ea3b4;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 30px;
+}
+.TitleUser h3{
+    margin: 0;
+    font-weight: 300;
+}
+.WrapperInbox{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid #505464;
+}
+.ScrollContainer{
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.TitleInbox h3{
+    font-size: 16px;
+}
+.TitleInbox span{
+    font-size: 14px;
+    color: #2196f3;
+}
+.TitleInbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.WrapperInbox p{
+    text-align: left;
+    color: #9ca1b2;
+    font-size: 14px;
+    margin: 0;
+    line-height: 28px;
+}
+.OldMessage{
+    color: #9ca1b2 !important;
+}
+.HeaderContainer span{
+    color: #2196f3;
+}
+.react-calendar{
+    background: #2f3242 !important;
+    height: 450px;
+    border: none !important;
+    width: 100% !important;
+}
+.react-calendar__navigation{
+    background: #3a3e52;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-bottom: 55px !important;
+}
+.react-calendar__month-view__weekdays__weekday{
+    font-size: 16px;
+    color: #9ea3b4;
+}
+.react-calendar button{
+    font-size: 16px;
+    color: #fff;
+}
+.react-calendar__month-view{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.react-calendar__navigation button{
+    font-size: 25px;
+}
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: #9ea3b4 !important;
+}
+.react-calendar__tile--active, .react-calendar__tile--hasActive{
+    background: #2196f3 !important;
+    border-radius: 100% !important;
+}
+button.react-calendar__tile:enabled:hover{
+    border-radius: 100%;
+    color: #2f3242;
+}
+.react-calendar__navigation__label{
+    font-size: 25px !important;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+.ContainerHeight{
+    max-width: 450px;
+    height: 100%;
+}
+.MarginBottom{
+    margin-bottom: 20px;
+}

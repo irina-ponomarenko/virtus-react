@@ -1,5 +1,11 @@
 body{
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  font-weight: 300;
 }
+.Wrapper{
+  background: #2a2c3b;
+  overflow: hidden;
+}
+
 

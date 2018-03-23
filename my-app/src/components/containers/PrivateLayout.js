@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import TopMenu from '../pages/Menu/TopMenu';
+import LeftBar from '../pages/Menu/LeftBar';
 
 const DefaultLayout = ({component: Component, ...rest}) => {
     return (
@@ -9,8 +10,11 @@ const DefaultLayout = ({component: Component, ...rest}) => {
             if (checkLogin === 'logged') {
                 return (
                     <div className="Wrapper">
-                        <TopMenu history={matchProps.history} />
-                        <Component {...matchProps} />
+                        <TopMenu history={matchProps.history}/>
+                        <div className="WrapperPage">
+                            <LeftBar />
+                            <Component {...matchProps} />
+                        </div>
                     </div>
                 );
             }

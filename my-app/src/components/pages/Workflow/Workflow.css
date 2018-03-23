@@ -1,0 +1,128 @@
+.MarginBlock{
+    margin-right: 0;
+}
+.PageHeader{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #227bc5;
+    color: #fff;
+    line-height: 94px;
+}
+.TitleHeader{
+    display: flex;
+    margin-left: 72px;
+}
+.TitleHeader h2{
+    margin-right: 45px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.TitleHeader h2:last-child{
+    margin-right: 0;
+}
+.ButtonHeader{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+.ButtonHeader h2{
+    margin-right: 35px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.SelectPage{
+    width: 157px;
+    height: 36px;
+    background: #227bc5;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+}
+.ProjectBlock{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.ListHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.WrapperList{
+    max-width: 296px;
+    width: 100%;
+}
+.MarginList{
+    margin-left: 72px;
+}
+.MarginList:first-child{
+    margin-left: 0;
+}
+.titleList h2{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.titleList p{
+    color: #9ea3b4;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.titleList span{
+    color: #2196f3;
+}
+.ListHeader i{
+    color: #9ea3b4;
+}
+.MarginUserBlock{
+    max-width: 296px;
+    width: 100%;
+    border-bottom: none;
+    background: #3a3e52;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.ProjectList{
+    padding: 0;
+}
+.AllProject{
+    display: flex;
+    overflow: auto;
+    margin-left: 72px;
+    margin-bottom: 25px;
+    width: 100%;
+    margin-top: 50px;
+}
+::-webkit-scrollbar {
+    width:15px;
+    height: 15px;
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: #4e5160;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #2196f3;
+    border: 1px solid #4e5160;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    height: 50px;
+    background-color: #2196f3;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-corner{
+    background-color:#2196f3;
+}

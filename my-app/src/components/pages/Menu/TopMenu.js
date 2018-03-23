@@ -11,7 +11,9 @@ class TopMenu extends React.Component{
         return(
             <div className="WrapperMenu">
                 <div className="TopMenu">
-                    <img src={Logo} alt="Logo"/>
+                    <h1>
+                        <img src={Logo} alt="Logo"/>
+                    </h1>
                     <div className="NavProfileProject">
                         <AddButton/>
                         <Link to =""><i className="fa fa-search"></i></Link>
@@ -19,7 +21,6 @@ class TopMenu extends React.Component{
                         <ProfileTopMenu history={this.props.history}/>
                     </div>
                 </div>
-                <LeftBar/>
             </div>
         );
     }
