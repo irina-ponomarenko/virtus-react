@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from './Select';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class HeaderProject extends React.Component{
     render(){
@@ -8,12 +8,12 @@ class HeaderProject extends React.Component{
         return(
             <header className="PageHeader">
                 <div className="TitleHeader">
-                    <Link to="/all_project">
+                    <NavLink exact to="/all_project" activeClassName="activeLink">
                         <h2>All Projects (358)</h2>
-                    </Link>
-                    <Link to="/workflow">
+                    </NavLink>
+                    <NavLink exact to="/workflow" activeClassName="activeLink">
                         <h2>Workflow</h2>
-                    </Link>
+                    </NavLink>
                 </div>
                 <div className="ButtonHeader">
                     <h2>Show projects:</h2>
