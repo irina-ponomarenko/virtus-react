@@ -9,6 +9,7 @@
     background: #227bc5;
     color: #fff;
     line-height: 94px;
+    box-shadow: 0 3px 80px rgba(23, 24, 32, 0.2);
 }
 .TitleHeader{
     display: flex;
@@ -43,6 +44,7 @@
 .WrapperProject{
     width: 100%;
     height: 100vh;
+    contain: size;
 }
 .SelectPage{
     width: 157px;

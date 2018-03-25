@@ -6,10 +6,8 @@ class AllProject extends React.Component{
     render(){
         return(
             <div className="WrapperProject">
-                <div className="WrapperBlock MarginBlock ProjectBlock">
-                    <HeaderProject/>
-                    <ProjectLists/>
-                </div>
+                <HeaderProject/>
+                <ProjectLists/>
             </div>
         );
     }
