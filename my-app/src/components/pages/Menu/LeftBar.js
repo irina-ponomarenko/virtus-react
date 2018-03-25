@@ -10,7 +10,7 @@ class LeftBar extends React.Component {
                 className: 'fa fa-home',
             },
             {
-                Link: '/workflow',
+                Link: '/all_project',
                 className: 'fa fa-bars',
             },
             {
