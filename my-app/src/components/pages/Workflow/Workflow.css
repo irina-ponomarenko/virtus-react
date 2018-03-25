@@ -145,10 +145,10 @@
 }
 .ProjectUserList{
     width: 100%;
-    border-collapse: collapse;
+    border-spacing: 0px 25px;
 }
 .ProjectUserList h2{
-     color: #fff;
+    color: #fff;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -167,7 +167,6 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     text-align: left;
-    padding-bottom: 25px;
 }
 .ProjectUserList thead th:first-child{
     padding-left: 55px;
