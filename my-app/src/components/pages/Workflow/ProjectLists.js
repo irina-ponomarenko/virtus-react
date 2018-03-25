@@ -173,20 +173,22 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
-                            )
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )
+                            })
                         }
                     </ul>
                 </div>
@@ -201,19 +203,21 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList2.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList2.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )}
                             )
                         }
                     </ul>
@@ -229,19 +233,21 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList3.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList3.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )}
                             )
                         }
                     </ul>
@@ -257,19 +263,21 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList4.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList4.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )}
                             )
                         }
                     </ul>
@@ -285,19 +293,21 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList5.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList5.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )}
                             )
                         }
                     </ul>
@@ -313,19 +323,21 @@ class ProjectLists extends React.Component{
                     </header>
                     <ul className="ProjectList">
                         {
-                            projectList6.map((item, index) =>
-                                <li className="WrapperUserBlock MarginUserBlock" key={index}>
-                                    <div className="UserBlock">
-                                        <div className="IconUser">
-                                            <img src={item.icon} alt="User icon"/>
+                            projectList6.map((item, index) =>{
+                                return(
+                                    <li className="WrapperUserBlock MarginUserBlock" key={index}>
+                                        <div className="UserBlock">
+                                            <div className="IconUser">
+                                                <img src={item.icon} alt="User icon"/>
+                                            </div>
+                                            <div className="TitleUser">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
+                                            </div>
                                         </div>
-                                        <div className="TitleUser">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.text.text1} &bull; <span>{item.text.text2}</span></p>
-                                        </div>
-                                    </div>
-                                    <i className={item.class} aria-hidden="true"></i>
-                                </li>
+                                        <i className={item.class} aria-hidden="true"></i>
+                                    </li>
+                                )}
                             )
                         }
                     </ul>

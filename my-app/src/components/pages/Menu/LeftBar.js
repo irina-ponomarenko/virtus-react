@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import TopMenu from '../Menu/TopMenu';
 
 class LeftBar extends React.Component {
     render () {

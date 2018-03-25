@@ -112,8 +112,8 @@
     overflow: auto;
     margin-left: 72px;
     margin-bottom: 25px;
-    width: 100%;
     margin-top: 50px;
+    margin-right: 25px;
 }
 ::-webkit-scrollbar {
     width:15px;
@@ -139,4 +139,68 @@
 
 ::-webkit-scrollbar-corner{
     background-color:#2196f3;
+}
+.noneOverflow{
+    overflow: inherit;
+}
+.ProjectUserList{
+    width: 100%;
+    border-collapse: collapse;
+}
+.ProjectUserList h2{
+     color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+.ProjectUserList p{
+    margin: 0;
+    color: #9ea3b4;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+.ProjectUserList thead th{
+    color: #9ea3b4;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 25px;
+}
+.ProjectUserList thead th:first-child{
+    padding-left: 55px;
+}
+.ProjectUserList .userInfo{
+    background: #3a3e52;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.ProjectUserList td{
+    padding-right: 94px;
+}
+.ProjectUserList td:first-child{
+    padding-left: 55px;
+}
+.positionBlock p{
+    margin: 0;
+}
+.positionBlock{
+    justify-content: space-between;
+}
+.positionBlock i{
+    color: #9ea3b4;
+    margin-left: 50px;
+}
+.react-sweet-progress-line{
+    background-color: #585c70 !important;
+}
+.react-sweet-progress{
+    flex-direction: row-reverse !important;
+    width: 292px !important;
+}
+.react-sweet-progress-symbol{
+    color: #fff !important;
+    margin-right: 20px;
 }
