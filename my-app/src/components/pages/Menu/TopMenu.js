@@ -1,10 +1,7 @@
 import React from 'react';
 import './Menu.css';
-import { Link } from 'react-router-dom';
 import Logo from '../../../assets/image/logo.png';
 import ProfileTopMenu from  './ProfileTopMenu';
-import AddButton from './AddButton';
-import LeftBar from './LeftBar';
 
 class TopMenu extends React.Component{
     render(){
@@ -15,9 +12,12 @@ class TopMenu extends React.Component{
                         <img src={Logo} alt="Logo"/>
                     </h1>
                     <div className="NavProfileProject">
-                        <AddButton/>
-                        <Link to =""><i className="fa fa-search"></i></Link>
-                        <Link to =""><i className="fa fa-bell"></i></Link>
+                        <button type="button" className="addButton">
+                            Add
+                            <i className="fa fa-plus"></i>
+                        </button>
+                        <button type="button" className="buttonProject"><i className="fa fa-search"></i></button>
+                        <button type="button" className="buttonProject"><i className="fa fa-bell"></i></button>
                         <ProfileTopMenu history={this.props.history}/>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import IconImg from '../../../assets/image/profileImg-2.png';
 import IconImg2 from '../../../assets/image/profileImg-4.png';
 import IconImg3 from '../../../assets/image/profileImg.png';
 
-class UsersLists extends React.Component{
+class ProjectLists extends React.Component{
     render(){
         const projectList = [
             {
@@ -334,4 +334,4 @@ class UsersLists extends React.Component{
         );
     }
 }
-export default UsersLists;
+export default ProjectLists;

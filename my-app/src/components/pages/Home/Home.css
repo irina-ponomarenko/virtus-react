@@ -150,6 +150,15 @@ button.react-calendar__tile:enabled:hover{
     font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
 }
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus{
+    background-color: transparent !important;
+    color: #2196f3;
+}
+.react-calendar__navigation__arrow react-calendar__navigation__next2-button:hover{
+    background-color: transparent !important;
+    color: #2196f3;
+}
 .ContainerHeight{
     max-width: 450px;
     height: 100%;

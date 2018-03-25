@@ -14,12 +14,20 @@
     display: flex;
     margin-left: 72px;
 }
-.TitleHeader h2{
+.TitleHeader a{
     margin-right: 45px;
+    color: #fff;
+    text-decoration: none;
+}
+.TitleHeader a:hover,
+.TitleHeader a:active{
+    color: #000000;
+}
+.TitleHeader a h2{
     font-weight: 400;
     font-size: 18px;
 }
-.TitleHeader h2:last-child{
+.TitleHeader a:last-child{
     margin-right: 0;
 }
 .ButtonHeader{
@@ -31,6 +39,9 @@
     margin-right: 35px;
     font-weight: 400;
     font-size: 18px;
+}
+.WrapperProject{
+    width: 100%;
 }
 .SelectPage{
     width: 157px;

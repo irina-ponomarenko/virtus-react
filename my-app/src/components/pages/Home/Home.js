@@ -11,9 +11,9 @@ import ListInBox from './ListInBox';
 class Home extends React.Component {
     state = {
         date: new Date(),
-    }
-
-    onChange = date => this.setState({ date })
+    };
+    onChange = date =>
+        this.setState({ date });
     render(){
         return(
            <div className="WrapperAllPage">

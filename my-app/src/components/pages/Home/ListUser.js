@@ -16,7 +16,7 @@ class ListUser extends React.Component{
             },
             {
                 icon: IconUser,
-                title: 'Mobile App',
+                title: 'Dashboard',
                 text: {
                     text1: 'Symu.co',
                     text2: '$1500'
@@ -25,7 +25,7 @@ class ListUser extends React.Component{
             },
             {
                 icon: IconUser,
-                title: 'Mobile App',
+                title: 'New website',
                 text: {
                     text1: 'Symu.co',
                     text2: '$1500'
@@ -34,7 +34,7 @@ class ListUser extends React.Component{
             },
             {
                 icon: IconUser,
-                title: 'Mobile App',
+                title: 'Landing page',
                 text: {
                     text1: 'Symu.co',
                     text2: '$1500'

@@ -10,6 +10,7 @@ import Projects from "./components/pages/Projects/Projects";
 import Raport from "./components/pages/Raport/Raport";
 import Inbox from "./components/pages/Inbox/Inbox";
 import NotFound from "./components/pages/NotFound";
+import AllProject from "./components/pages/Workflow/AllProject";
 
 import LoginLayout from "./components/containers/LoginLayout";
 import PrivateLayout from "./components/containers/PrivateLayout";
@@ -20,12 +21,13 @@ const App = () =>{
     return (
         <Router history={BrowserHistory}>
             <Switch>
-                <LoginLayout exact path="/Login" component={Login}/>
+                <LoginLayout exact path="/login" component={Login}/>
                 <PrivateLayout exact path="/" component={Home} />
-                <PrivateLayout exact path="/Workflow" component={Workflow} />
-                <PrivateLayout exact path="/Projects" component={Projects} />
-                <PrivateLayout exact path="/Raport" component={Raport}/>
-                <PrivateLayout exact path="/Inbox" component={Inbox}/>
+                <PrivateLayout exact path="/workflow" component={Workflow} />
+                <PrivateLayout exact path="/projects" component={Projects} />
+                <PrivateLayout exact path="/raport" component={Raport}/>
+                <PrivateLayout exact path="/inbox" component={Inbox}/>
+                <PrivateLayout exact peth="/all_project" component={AllProject}/>
 
                 <Route component={NotFound} />
             </Switch>

@@ -10,19 +10,19 @@ class LeftBar extends React.Component {
                 className: 'fa fa-home',
             },
             {
-                Link: '/Workflow',
+                Link: '/workflow',
                 className: 'fa fa-bars',
             },
             {
-                Link: '/Projects',
+                Link: '/projects',
                 className: 'fa fa-line-chart',
             },
             {
-                Link: '/Raport',
+                Link: '/raport',
                 className: 'fa fa-envelope',
             },
             {
-                Link: '/Inbox',
+                Link: '/inbox',
                 className: 'fa fa-users'
             }
         ];

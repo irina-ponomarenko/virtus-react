@@ -6,7 +6,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="WrapperLogin">
-                <Form/>
+                <Form history={this.props.history}/>
             </div>
         );
     }
