@@ -13,15 +13,15 @@ class LeftBar extends React.Component {
                 className: 'fa fa-bars',
             },
             {
-                Link: '/projects',
+                Link: '/raport',
                 className: 'fa fa-line-chart',
             },
             {
-                Link: '/raport',
+                Link: '/inbox',
                 className: 'fa fa-envelope',
             },
             {
-                Link: '/inbox',
+                Link: '/users',
                 className: 'fa fa-users'
             }
         ];

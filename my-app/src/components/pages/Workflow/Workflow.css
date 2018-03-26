@@ -43,8 +43,8 @@
 }
 .WrapperProject{
     width: 100%;
-    height: 100vh;
-    contain: size;
+    height: auto;
+    overflow: auto;
 }
 .SelectPage{
     width: 157px;
@@ -140,6 +140,10 @@
 ::-webkit-scrollbar-corner{
     background-color:#2196f3;
 }
+.AllProjectList{
+    margin-top: 50px;
+    margin-left: 72px;
+}
 .noneOverflow{
     overflow: inherit;
 }
@@ -178,6 +182,9 @@
 }
 .ProjectUserList td{
     padding-right: 94px;
+}
+.ProjectUserList td:last-child{
+    padding-right: 25px;
 }
 .ProjectUserList td:first-child{
     padding-left: 55px;

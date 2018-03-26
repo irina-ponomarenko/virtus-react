@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from './Select';
+import Select from '../atoms/Select';
 import { NavLink } from 'react-router-dom';
 
 class HeaderProject extends React.Component{

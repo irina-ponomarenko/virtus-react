@@ -1,0 +1,71 @@
+.noBackground{
+    background: transparent;
+}
+.WrapperCircular{
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 65px;
+    margin-top: 40px;
+}
+.CircularProgressbar{
+    max-width: 75px;
+}
+.PositionBlock{
+    flex-direction: column;
+}
+.CircularProgressbar .CircularProgressbar-trail{
+    stroke: #4d5060 !important;
+    stroke-width: 5 !important;
+}
+.CircularProgressbar .CircularProgressbar-path{
+    stroke-width: 5 !important;
+}
+.CircularProgressbar .CircularProgressbar-text{
+    font-size: 22px !important;
+}
+.CircularInfo{
+    display: flex;
+    align-items: center;
+}
+.AboutCircular{
+    margin-left: 30px;
+}
+.AboutCircular h2{
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+}
+.AboutCircular p{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Montserrat',sans-serif;
+    color: #9ca1b2;
+    margin: 0;
+}
+.HeaderSelect{
+    background: #2b2d3c;
+    border: 1px solid #9ea3b4;
+    color: #9ea3b4;
+}
+.WrapperSortSelect{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+.WrapperSortSelect h2{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Montserrat',sans-serif;
+    color: #9ca1b2;
+    margin-right: 25px;
+}
+.HeaderGrafics{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}

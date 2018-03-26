@@ -8,6 +8,7 @@
     "rc-progress": "^2.2.5",
     "react": "^16.2.0",
     "react-calendar": "^2.13.5",
+    "react-circular-progressbar": "^0.8.0",
     "react-dom": "^16.2.0",
     "react-highcharts": "^16.0.2",
     "react-progressbar": "^15.4.1",

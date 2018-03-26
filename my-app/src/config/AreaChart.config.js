@@ -1,7 +1,7 @@
 const Highcharts = {
     chart: {
         type: 'areaspline',
-        backgroundColor: '#2f3242',
+        backgroundColor: 'transparent',
     },
     title: {
         text: ' '

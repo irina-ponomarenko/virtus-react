@@ -114,7 +114,7 @@ class ProjectUserList extends  React.Component{
             }
         ];
         return(
-            <div className="AllProject noneOverflow">
+            <div className="AllProjectList noneOverflow">
                 <table className="ProjectUserList">
                     <thead>
                     <tr>

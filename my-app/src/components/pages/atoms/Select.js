@@ -6,7 +6,7 @@ class Select extends React.Component {
     };
     render() {
         return(
-            <select className="SelectPage" onChange={this.onChange}>
+            <select className={'SelectPage ' + this.props.className} onChange={this.onChange}>
                 {
                     this.props.data.map((item, index) => {
                         return <option key={index} value={item}>{item}</option>

@@ -6,7 +6,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Login from "./components/pages/Login/Login";
 import Home from "./components/pages/Home/Home";
 import Workflow from "./components/pages/Workflow/Workflow";
-import Projects from "./components/pages/Projects/Projects";
+import Users from "./components/pages/Users/Users";
 import Raport from "./components/pages/Raport/Raport";
 import Inbox from "./components/pages/Inbox/Inbox";
 import NotFound from "./components/pages/NotFound";
@@ -24,10 +24,10 @@ const App = () =>{
                 <LoginLayout exact path="/login" component={Login}/>
                 <PrivateLayout exact path="/" component={Home} />
                 <PrivateLayout exact path="/workflow" component={Workflow} />
-                <PrivateLayout exact path="/projects" component={Projects} />
+                <PrivateLayout exact path="/all_project" component={AllProject}/>
                 <PrivateLayout exact path="/raport" component={Raport}/>
                 <PrivateLayout exact path="/inbox" component={Inbox}/>
-                <PrivateLayout exact path="/all_project" component={AllProject}/>
+                <PrivateLayout exact path="/users" component={Users}/>
 
                 <Route component={NotFound} />
             </Switch>
