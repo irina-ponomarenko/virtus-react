@@ -21,7 +21,7 @@ class ProjectUserList extends  React.Component{
                 title3: '15 May 2016',
                 text2: '10 days left',
                 title4: '40 hours',
-                progress: '70',
+                progress: 70,
                 title5: 'Development',
                 imgIcon: ProfileIcon4,
                 title6: 'Dominic Lynton',
@@ -36,7 +36,7 @@ class ProjectUserList extends  React.Component{
                 title3: '21 May 2016',
                 text2: '23 days left',
                 title4: '7 hours',
-                progress: '15',
+                progress: 15,
                 title5: 'Planning',
                 imgIcon: ProfileIcon5,
                 title6: 'Lyan Roach',
@@ -51,7 +51,7 @@ class ProjectUserList extends  React.Component{
                 title3: '15 May 2016',
                 text2: '2 days left',
                 title4: '56 hours',
-                progress: '90',
+                progress: 90,
                 title5: 'Testing',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
@@ -66,7 +66,7 @@ class ProjectUserList extends  React.Component{
                 title3: '15 June 2015',
                 text2: '30 days left',
                 title4: '10 hours',
-                progress: '40',
+                progress: 40,
                 title5: 'Design',
                 imgIcon: ProfileIcon5,
                 title6: 'Lyan Roach',
@@ -81,7 +81,7 @@ class ProjectUserList extends  React.Component{
                 title3: '8 August 2016',
                 text2: '2 months left',
                 title4: '0 hours',
-                progress: '0',
+                progress: 0,
                 title5: 'Quened',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
@@ -96,7 +96,7 @@ class ProjectUserList extends  React.Component{
                 title3: '5th May 2016',
                 text2: 'Completed',
                 title4: '59 hours',
-                progress: '100',
+                progress: 100,
                 title5: 'Completed',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
@@ -111,7 +111,7 @@ class ProjectUserList extends  React.Component{
                 title3: '2th May 2016',
                 text2: 'Completed',
                 title4: '30 hours',
-                progress: '100',
+                progress: 100,
                 title5: 'Completed',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
@@ -138,13 +138,13 @@ class ProjectUserList extends  React.Component{
                     {
                         userList.map((item,index) =>{
                             let rowClass;
-                            if (item.percent === 0) {
+                            if (item.progress === 0) {
                                 rowClass = "WhiteBorder";
                             }
-                            else if (item.percent >=1 && item.percent <= 99) {
+                            else if (item.progress >=1 && item.percent <= 99) {
                                 rowClass = "BlueBorder";
                             }
-                            else if (item.percent === 100) {
+                            else if (item.progress === 100) {
                                 rowClass = "GreenBorder";
                             }
                             return(
