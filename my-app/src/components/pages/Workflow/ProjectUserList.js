@@ -141,7 +141,7 @@ class ProjectUserList extends  React.Component{
                             if (item.progress === 0) {
                                 rowClass = "WhiteBorder";
                             }
-                            else if (item.progress >=1 && item.progress <= 99) {
+                            else if (item.progress >= 1 && item.progress <= 99) {
                                 rowClass = "BlueBorder";
                             }
                             else if (item.progress === 100) {
