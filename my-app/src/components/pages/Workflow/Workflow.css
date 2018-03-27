@@ -134,6 +134,7 @@
 ::-webkit-scrollbar-thumb:horizontal {
     height: 50px;
     background-color: #2196f3;
+    border: 1px solid #4e5160;
     -webkit-border-radius: 6px;
 }
 

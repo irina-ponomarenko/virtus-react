@@ -69,6 +69,48 @@
     width: 100%;
     justify-content: space-between;
 }
+.ProjectUserList{
+    border-collapse: collapse;
+}
+.ProjectUserList td{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
 .TableInfo{
     border-bottom: 1px solid #4d5060;
+}
+.TableTitle{
+    background: #3a3e52;
+}
+.TableTitle th{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.TableTitle th i{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.TableList{
+    width: 100%;
+}
+.TableList{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.ProjectUserList thead th:first-child{
+    color: #fff;
+}
+.StatusActive{
+    color: #4caf50;
+}
+.StatusDisabled{
+    color: #f44336;
+}
+.StatusClass{
+    display: flex;
+    align-items: center;
+}
+.StatusClass i{
+    margin-right: 10px;
 }
