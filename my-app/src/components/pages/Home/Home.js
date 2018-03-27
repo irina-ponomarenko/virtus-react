@@ -5,6 +5,8 @@ import BoxWrapper from '../atoms/BoxWrapper';
 import ReactHighcharts from 'react-highcharts';
 import AreaChart from '../../../config/AreaChart.config';
 import HightchartsColumn from '../../../config/ColumnChart.config';
+import CircularProgressbar from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import ListUser from './ListUser';
 import ListInBox from './ListInBox';
 
@@ -19,6 +21,29 @@ class Home extends React.Component {
            <div className="WrapperAllPage">
                <div className="WrapperBlock MarginBottom">
                    <BoxWrapper>
+                       <div className="WrapperCircular">
+                           <div className="CircularInfo">
+                               <CircularProgressbar percentage={75} />
+                               <div className="AboutCircular">
+                                   <h2>1 300</h2>
+                                   <p>VIEWS</p>
+                               </div>
+                           </div>
+                           <div className="CircularInfo">
+                               <CircularProgressbar percentage={35} />
+                               <div className="AboutCircular">
+                                   <h2>800</h2>
+                                   <p>VISITORS</p>
+                               </div>
+                           </div>
+                           <div className="CircularInfo">
+                               <CircularProgressbar percentage={62} />
+                               <div className="AboutCircular">
+                                   <h2>3 800</h2>
+                                   <p>IMPRESSIONS</p>
+                               </div>
+                           </div>
+                       </div>
                        <ReactHighcharts config={AreaChart}></ReactHighcharts>
                    </BoxWrapper>
                    <ListUser/>
