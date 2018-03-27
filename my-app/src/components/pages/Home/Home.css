@@ -49,6 +49,9 @@
     color: #9ea3b4;
     cursor: pointer;
 }
+.WrapperUserBlock i:hover{
+    color: #fff;
+}
 .IconUser{
     margin-right: 25px;
 }

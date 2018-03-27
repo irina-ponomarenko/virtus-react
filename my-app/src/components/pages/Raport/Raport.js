@@ -6,6 +6,7 @@ import BoxWrapper from '../atoms/BoxWrapper';
 import ReactHighcharts from 'react-highcharts';
 import AreaChart from '../../../config/AreaChart.config';
 import Select from '../atoms/Select';
+import TableList from './TableList';
 
 class Raport extends  React.Component{
     render(){
@@ -44,6 +45,7 @@ class Raport extends  React.Component{
                 <BoxWrapper className="noBackground">
                     <ReactHighcharts config={AreaChart}></ReactHighcharts>
                 </BoxWrapper>
+                <TableList/>
             </div>
         );
     }

@@ -21,12 +21,13 @@ class ProjectUserList extends  React.Component{
                 title3: '15 May 2016',
                 text2: '10 days left',
                 title4: '40 hours',
-                progress: <Progress percent={70}/>,
+                progress: '70',
                 title5: 'Development',
                 imgIcon: ProfileIcon4,
                 title6: 'Dominic Lynton',
                 text3: 'Front End Dev',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'BlueBorder'
             },
             {
                 title1: 'Landing page',
@@ -35,12 +36,13 @@ class ProjectUserList extends  React.Component{
                 title3: '21 May 2016',
                 text2: '23 days left',
                 title4: '7 hours',
-                progress: <Progress percent={15}/>,
+                progress: '15',
                 title5: 'Planning',
                 imgIcon: ProfileIcon5,
                 title6: 'Lyan Roach',
                 text3: 'UX/UI Designer',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'BlueBorder'
             },
             {
                 title1: 'New dashboard',
@@ -49,12 +51,13 @@ class ProjectUserList extends  React.Component{
                 title3: '15 May 2016',
                 text2: '2 days left',
                 title4: '56 hours',
-                progress: <Progress percent={90}/>,
+                progress: '90',
                 title5: 'Testing',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
                 text3: 'Account',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'BlueBorder'
             },
             {
                 title1: 'New logo',
@@ -63,12 +66,13 @@ class ProjectUserList extends  React.Component{
                 title3: '15 June 2015',
                 text2: '30 days left',
                 title4: '10 hours',
-                progress: <Progress percent={40}/>,
+                progress: '40',
                 title5: 'Design',
                 imgIcon: ProfileIcon5,
                 title6: 'Lyan Roach',
                 text3: 'UX/UI Designer',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'BlueBorder'
             },
             {
                 title1: 'Landing page',
@@ -77,12 +81,13 @@ class ProjectUserList extends  React.Component{
                 title3: '8 August 2016',
                 text2: '2 months left',
                 title4: '0 hours',
-                progress: <Progress/>,
+                progress: '0',
                 title5: 'Quened',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
                 text3: 'Account',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'WhiteBorder'
             },
             {
                 title1: 'Mobile app',
@@ -91,12 +96,13 @@ class ProjectUserList extends  React.Component{
                 title3: '5th May 2016',
                 text2: 'Completed',
                 title4: '59 hours',
-                progress: <Progress percent={100}/>,
+                progress: '100',
                 title5: 'Completed',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
                 text3: 'Account',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'GreenBorder'
             },
             {
                 title1: 'Wordpress theme',
@@ -105,12 +111,13 @@ class ProjectUserList extends  React.Component{
                 title3: '2th May 2016',
                 text2: 'Completed',
                 title4: '30 hours',
-                progress: <Progress percent={100}/>,
+                progress: '100',
                 title5: 'Completed',
                 imgIcon: ProfileIcon2,
                 title6: 'Michelle Stewart',
                 text3: 'Account',
-                class: 'fa fa-ellipsis-v'
+                class: 'fa fa-ellipsis-v',
+                classBorder: 'GreenBorder'
             }
         ];
         return(
@@ -130,9 +137,19 @@ class ProjectUserList extends  React.Component{
                     <tbody>
                     {
                         userList.map((item,index) =>{
+                            let rowClass;
+                            if (item.percent === 0) {
+                                rowClass = "WhiteBorder";
+                            }
+                            else if (item.percent >=1 && item.percent <= 99) {
+                                rowClass = "BlueBorder";
+                            }
+                            else if (item.percent === 100) {
+                                rowClass = "GreenBorder";
+                            }
                             return(
                                 <tr className="userInfo" key={index}>
-                                    <td className="infoProject">
+                                    <td className={rowClass + " infoProject"}>
                                         <h2>{item.title1}</h2>
                                         <p>{item.text1}</p>
                                     </td>
@@ -147,7 +164,7 @@ class ProjectUserList extends  React.Component{
                                         <h2>{item.title4}</h2>
                                     </td>
                                     <td className="progressProject">
-                                        {item.progress}
+                                        <Progress percent={item.progress} />
                                     </td>
                                     <td className="statusProject">
                                         <h2>{item.title5}</h2>
