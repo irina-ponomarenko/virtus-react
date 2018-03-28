@@ -63,28 +63,40 @@
     color: #9ca1b2;
     margin-right: 25px;
 }
-.HeaderGrafics{
+.HeaderGraph{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 }
-.ProjectUserList{
+.ProjectGraphList{
     border-collapse: collapse;
+    width: 100%;
 }
-.ProjectUserList td{
+.ProjectGraphList td{
     padding-bottom: 30px;
     padding-top: 30px;
 }
 .TableInfo{
     border-bottom: 1px solid #4d5060;
 }
+.TableInfo td h2{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat',sans-serif;
+    color: #fff;
+}
 .TableTitle{
     background: #3a3e52;
+    text-align: left;
 }
 .TableTitle th{
     padding-bottom: 30px;
     padding-top: 30px;
+    color: #9ca1b2;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 .TableTitle th i{
     margin-left: 10px;
@@ -98,8 +110,12 @@
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
-.ProjectUserList thead th:first-child{
+.ProjectGraphList thead th:first-child{
     color: #fff;
+    padding-left: 25px;
+}
+.ProjectGraphList td:first-child{
+    padding-left: 25px;
 }
 .StatusActive{
     color: #4caf50;

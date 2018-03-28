@@ -43,7 +43,7 @@ class TableList extends  React.Component{
         ];
         return(
             <div className="TableList">
-                <table className="ProjectUserList">
+                <table className="ProjectGraphList">
                     <thead>
                     <tr className="TableTitle">
                         <th>Campaing <i className="fa fa-chevron-down" aria-hidden="true"></i></th>

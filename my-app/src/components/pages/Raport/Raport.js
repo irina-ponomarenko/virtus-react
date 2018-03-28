@@ -13,7 +13,7 @@ class Raport extends  React.Component{
         const forHeaderSelect = ["Week","Month","Year"];
         return(
             <div className="WrapperBlock PositionBlock">
-                <header className="HeaderGrafics">
+                <header className="HeaderGraph">
                     <div className="WrapperCircular">
                         <div className="CircularInfo">
                             <CircularProgressbar percentage={75} />
