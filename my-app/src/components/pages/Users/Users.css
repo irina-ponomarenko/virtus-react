@@ -1,0 +1,49 @@
+.TableHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.TableTitleUsers{
+    color: #9ea3b4;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.TableUsers{
+    border-collapse: collapse;
+    width: 100%;
+}
+.TableUsers thead tr th{
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+.TableUsers tbody tr{
+    border-bottom: 1px solid #4e5160;
+}
+.WrapperUsers{
+    display: flex;
+    align-items: center;
+}
+.WrapperUsers img{
+    border-radius: 50px;
+    width: 60px;
+}
+.WrapperUsers span{
+    margin-right: 25px;
+}
+.User td{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.WrapperUsers p{
+    color: #9ea3b4;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.Active{
+    color: green;
+}

@@ -5,6 +5,8 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
     "font-awesome": "^4.7.0",
+    "material-ui": "^0.20.0",
+    "material-ui-pagination": "^1.1.6",
     "rc-progress": "^2.2.5",
     "react": "^16.2.0",
     "react-calendar": "^2.13.5",
