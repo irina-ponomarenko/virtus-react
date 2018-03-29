@@ -205,12 +205,16 @@ class ProjectLists extends React.Component{
                             else if (projectNumber >1){
                                 projectName = 'projects';
                             }
+                            let sumaProjects = 0;
+                            item.projectList.forEach(function (mapItem, mapIndex){
+                                sumaProjects += mapItem.text.priceProject;
+                            });
                             return(
                                 <div className="WrapperList MarginList" key={index}>
                                     <header className="ListHeader">
                                         <div className="titleList">
                                             <h2>{item.titleHeader}</h2>
-                                            <p>{item.projectList.length} {projectName} &bull; <span>${item.price}</span></p>
+                                            <p>{item.projectList.length} {projectName} &bull; <span>${sumaProjects}</span></p>
                                         </div>
                                         <i className={item.classHeader + " fa"} aria-hidden="true"></i>
                                     </header>
