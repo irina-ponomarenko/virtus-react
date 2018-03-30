@@ -1,9 +1,10 @@
 .TableHeader{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
-.TableTitleUsers{
+.TableTitleUsers,
+.SelectWrapper h2{
     color: #9ea3b4;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
@@ -12,6 +13,7 @@
 .TableUsers{
     border-collapse: collapse;
     width: 100%;
+    margin-top: 25px;
 }
 .TableUsers thead tr th{
     color: #fff;
@@ -19,6 +21,8 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
+    border-bottom: 1px solid #4e5160;
+    padding-bottom: 25px;
 }
 .TableUsers tbody tr{
     border-bottom: 1px solid #4e5160;
@@ -27,23 +31,54 @@
     display: flex;
     align-items: center;
 }
+.SelectWrapper{
+    display: flex;
+    align-items: center;
+}
+.SelectWrapper h2{
+    margin-right: 25px;
+}
 .WrapperUsers img{
     border-radius: 50px;
     width: 60px;
 }
 .WrapperUsers span{
     margin-right: 25px;
+    color: #9ea3b4;
 }
 .User td{
     padding-top: 25px;
     padding-bottom: 25px;
 }
 .WrapperUsers p{
-    color: #9ea3b4;
+    color: #fff;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
-.Active{
+.statusUser p{
     color: green;
+}
+.emailUser p,
+.phoneUsers p,
+.settingUser i{
+    color: #9ea3b4;
+}
+.settingUser i{
+    cursor: pointer;
+}
+.settingUser i:hover{
+    color: #fff;
+}
+.statusUser .noActive{
+    color: #9ea3b4;
+}
+.PaginationWrapper{
+    margin-top: 25px;
+}
+.PaginationWrapper div button{
+    color: #9ea3b4 !important;
+}
+.PaginationWrapper div svg{
+    fill: #fff !important;
 }

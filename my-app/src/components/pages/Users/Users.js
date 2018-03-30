@@ -1,6 +1,9 @@
 import React from 'react';
 import './Users.css';
-import Select from '../atoms/Select';
+import { connect } from 'react-redux';
+import store from "../../../redux/store";
+
+import SelectSort from '../atoms/SelectSort';
 import Pagination from 'material-ui-pagination';
 import Picture1 from '../../../assets/image/profileImg.png';
 import Picture2 from '../../../assets/image/profileImg-2.png';
@@ -9,21 +12,13 @@ import Picture4 from '../../../assets/image/profileImg-4.png';
 import Picture5 from '../../../assets/image/profileImg-5.png';
 
 
-class Raport extends  React.Component{
-    // constructor() {
-    //     super();
-    //
-    //     this.state = {
-    //         total: countPages,
-    //         display: 5,
-    //         number: 1,
-    //     };
-    // }
-    render(){
-        const TableUserList = [
+class Users extends  React.Component{
+    constructor() {
+        super();
+        this.TableUserList = [
             {
                 picture: {
-                    pictureProfile: Picture1,
+                    pictureProfile: Picture4,
                     title: "Dominic Lynton",
                     text: "Front End Dev"
                 },
@@ -53,7 +48,7 @@ class Raport extends  React.Component{
             },
             {
                 picture: {
-                    pictureProfile: Picture3,
+                    pictureProfile: Picture5,
                     title: "Lyan Roach",
                     text: "UX/UI Designer"
                 },
@@ -68,7 +63,7 @@ class Raport extends  React.Component{
             },
             {
                 picture: {
-                    pictureProfile: Picture4,
+                    pictureProfile: Picture1,
                     title: "Andrea Bonita",
                     text: "Designer"
                 },
@@ -83,7 +78,7 @@ class Raport extends  React.Component{
             },
             {
                 picture: {
-                    pictureProfile: Picture5,
+                    pictureProfile: Picture3,
                     title: "Glen Stephano",
                     text: "Designer"
                 },
@@ -97,12 +92,59 @@ class Raport extends  React.Component{
                 class: "fa fa-ellipsis-v"
             },
         ];
-        const forSelectSort = ["Active first"," No Active"];
+
+        const leftItems = this.TableUserList.length % 5;
+        let countPages = (this.TableUserList.length - leftItems) / 5;
+
+        this.state = {
+            total: countPages,
+            display: 4,
+            number: 1,
+        };
+    }
+    handlerClick(e) {
+        store.dispatch({
+            type: 'SORT_STATUS',
+            payload: {
+                status: e.target.value
+            }
+        });
+    }
+    render(){
+        console.log(this.props.statusProps);
+
+        let activeFirst;
+        const listActive = this.TableUserList.filter((item) => {
+            if (item.statusUser.class !== "noActive"){
+                return item;
+            }
+        });
+        const listNonActive = this.TableUserList.filter((item) => {
+            if (item.statusUser.class === "noActive"){
+                return item;
+            }
+        });
+        console.log(listNonActive);
+        const status = this.props.statusProps || "Active first";
+
+        if (status === "Active first") {
+            activeFirst = listActive.concat(listNonActive);
+        }
+        else if (status === "No Active") {
+            activeFirst = listNonActive.concat(listActive);
+        }
+
+        const indexStart = this.state.number * 5 - 5;
+        const indexEnd = this.state.number * 5;
+        const list = activeFirst.slice(indexStart,  indexEnd);
+        const forSelectSort = ["Active first","No Active"];
         return(
             <div className="WrapperAllPage">
                 <header className="TableHeader">
-                    <h2 className="TableTitleUsers">Users <span>(0)</span></h2>
-                    <Select data={forSelectSort} className="HeaderSelect"/>
+                    <div className="SelectWrapper">
+                        <h2>Sort:</h2>
+                        <SelectSort data={forSelectSort} className="HeaderSelect"/>
+                    </div>
                 </header>
                 <table className="TableUsers">
                     <thead>
@@ -115,7 +157,7 @@ class Raport extends  React.Component{
                     </thead>
                     <tbody>
                     {
-                        TableUserList.map((item, index) =>{
+                        list.map((item, index) =>{
                             return(
                                 <tr className="User" key={index}>
                                     <td className="PictureUser">
@@ -145,16 +187,23 @@ class Raport extends  React.Component{
                     }
                     </tbody>
                 </table>
-                {/*<div className="paginationWrapper">*/}
-                    {/*<Pagination*/}
-                        {/*total = { this.state.total }*/}
-                        {/*current = { this.state.number }*/}
-                        {/*display = { this.state.display }*/}
-                        {/*onChange = { number => this.setState({ number }) }*/}
-                    {/*/>*/}
-                {/*</div>*/}
+                <div className="PaginationWrapper">
+                    <Pagination
+                        total = { this.state.total }
+                        current = { this.state.number }
+                        display = { this.state.display }
+                        onChange = { number => this.setState({ number }) }
+                    />
+                </div>
             </div>
         );
     }
 }
-export  default Raport;
+const mapState = (state, props) => {
+    console.log(state);
+
+    return {
+        statusProps: state.status
+    }
+};
+export  default connect (mapState)(Users);
