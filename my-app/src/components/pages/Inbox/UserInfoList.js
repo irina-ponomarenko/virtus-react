@@ -6,7 +6,10 @@ class UserInfoList extends React.Component{
         return(
             <div className="WrapperUserInfo">
                 <div className="UserInfoChat">
-                    <img src={BigProphileIcon} alt="About User"/>
+                    <div className="ProphileIconWrapper">
+                        <i className="fa fa-circle fa-2x" aria-hidden="true"></i>
+                        <img src={BigProphileIcon} alt="About User"/>
+                    </div>
                     <div className="TitleName">
                         <h2>Lyall Roach</h2>
                         <span>UX/UI Designer</span>

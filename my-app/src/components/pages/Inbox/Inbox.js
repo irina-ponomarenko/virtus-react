@@ -4,7 +4,7 @@ import Select from '../atoms/Select';
 import { Link } from 'react-router-dom';
 import InboxLis from './InboxList';
 import ChatList from './ChatList';
-import UserListInfo from './UserInfoList';
+import UserInfoList from './UserInfoList';
 
 class Inbox extends React.Component{
     render() {
