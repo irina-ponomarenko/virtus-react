@@ -3,6 +3,7 @@ import './Inbox.css';
 import Select from '../atoms/Select';
 import { Link } from 'react-router-dom';
 import InboxLis from './InboxList';
+import ChatList from './ChatList';
 
 class Inbox extends React.Component{
     render() {
@@ -29,7 +30,10 @@ class Inbox extends React.Component{
                         <Select data={forPagesSelect}/>
                     </div>
                 </header>
-                <InboxLis/>
+                <div className="WrapperContentChat">
+                    <InboxLis/>
+                    <ChatList/>
+                </div>
             </div>
         );
     }

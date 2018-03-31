@@ -1,3 +1,6 @@
+.WrapperContentChat{
+    display: flex;
+}
 .marginLink{
     display: flex;
     align-items: center;
@@ -82,4 +85,95 @@
 }
 .OldMessage{
     color: #9ca1b2;
+}
+.WrapperMessageChat img{
+    width:60px;
+    border-radius: 60px;
+    margin-right: 23px;
+}
+.NextUserMessage img{
+    margin: 0;
+    margin-left: 23px;
+}
+.NextUserMessage{
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+.ChatList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+}
+.WrapperMessageChat{
+    display: flex;
+    align-items: center;
+    max-width: 540px;
+    width: 100%;
+    margin-top: 40px;
+}
+.WrapperMessageChat:first-child{
+    margin-top: 0;
+}
+.MessageText{
+    background: #3f4257;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-bottom: 22px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    margin-bottom: 15px;
+}
+.MessageText p{
+    margin: 0;
+    color: #fff;
+    line-height: 28px;
+    font-size: 16px;
+    margin-right: 25px;
+}
+.ChatMessage span {
+    color: #9ca1b2;
+    font-size: 14px;
+}
+.RightAlign{
+    display: flex;
+    justify-content: flex-end;
+}
+.NewBackground{
+    background: #2196f3;
+    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+}
+.WriteMessage{
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+    background: #404359;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.WriteMessage input{
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 28px;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    margin-right: 10px;
+}
+.WriteMessage input::placeholder{
+    font-size: 16px;
+}
+.WriteMessage i{
+    font-size: 25px;
+    color: #9ca1b2;
+    margin-right: 28px;
+}
+.WriteMessage i:hover{
+    color: #2196f3;
+    cursor: pointer;
 }
