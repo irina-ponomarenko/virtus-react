@@ -4,6 +4,7 @@ import Select from '../atoms/Select';
 import { Link } from 'react-router-dom';
 import InboxLis from './InboxList';
 import ChatList from './ChatList';
+import UserListInfo from './UserInfoList';
 
 class Inbox extends React.Component{
     render() {
@@ -33,6 +34,7 @@ class Inbox extends React.Component{
                 <div className="WrapperContentChat">
                     <InboxLis/>
                     <ChatList/>
+                    <UserInfoList/>
                 </div>
             </div>
         );
