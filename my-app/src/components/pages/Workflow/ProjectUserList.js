@@ -7,13 +7,13 @@ import ProfileIcon1 from '../../../assets/image/profileImg.png';
 import ProfileIcon2 from '../../../assets/image/profileImg-2.png';
 import ProfileIcon3 from '../../../assets/image/profileImg-3.png';
 import ProfileIcon5 from '../../../assets/image/profileImg-5.png';
+import store from '../../../redux/store';
 
 class ProjectUserList extends  React.Component{
     constructor(){
         super();
-    }
-    render(){
-        const userList =[
+
+        this.userList = [
             {
                 title1: 'New website',
                 text1: 'Microsoft',
@@ -120,6 +120,20 @@ class ProjectUserList extends  React.Component{
                 classBorder: 'GreenBorder'
             }
         ];
+    }
+
+    componentDidMount(){
+        let sumItemsUsers = this.userList.length;
+
+        store.dispatch({
+            type: 'PROJECT_LENGTH',
+            payload: {
+                sumProject: sumItemsUsers
+            }
+        });
+    }
+
+    render(){
         return(
             <div className="AllProjectList noneOverflow">
                 <table className="ProjectUserList">
@@ -136,7 +150,7 @@ class ProjectUserList extends  React.Component{
                     </thead>
                     <tbody>
                     {
-                        userList.map((item,index) =>{
+                        this.userList.map((item,index) =>{
                             let rowClass;
                             if (item.progress === 0) {
                                 rowClass = "WhiteBorder";

@@ -2,6 +2,7 @@ import React from 'react';
 import IconImg from '../../../assets/image/profileImg-2.png';
 import IconImg2 from '../../../assets/image/profileImg-4.png';
 import IconImg3 from '../../../assets/image/profileImg.png';
+import store from '../../../redux/store';
 
 class ProjectLists extends React.Component{
     render(){
@@ -193,6 +194,19 @@ class ProjectLists extends React.Component{
                 ]
             }
         ];
+        let sumItems = 0;
+
+        projectListUser.forEach((item)=>{
+            sumItems += item.projectList.length;
+        });
+
+        store.dispatch({
+            type: 'PROJECT_LENGTH',
+            payload: {
+                sumProject: sumItems
+            }
+        });
+
         return(
             <div className="AllProject">
                     {
@@ -246,5 +260,6 @@ class ProjectLists extends React.Component{
         );
     }
 }
+
 export default ProjectLists;
 

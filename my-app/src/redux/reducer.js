@@ -8,6 +8,9 @@ const rootReducer = (state = initState, action) => {
         case 'FILTER':
             return { filter: action.payload.filter };
 
+        case 'PROJECT_LENGTH':
+            return { sumProject: action.payload.sumProject };
+
         default:
             return state;
     }

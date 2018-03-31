@@ -3,8 +3,10 @@ import React from 'react';
 class Select extends React.Component {
     onChange = (e) => {
         console.log(e.target.value);
+
     };
     render() {
+        console.log(this.props);
         return(
             <select className={'SelectPage ' + this.props.className} onChange={this.onChange}>
                 {

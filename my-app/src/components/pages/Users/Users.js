@@ -1,7 +1,6 @@
 import React from 'react';
 import './Users.css';
 import { connect } from 'react-redux';
-import store from "../../../redux/store";
 
 import SelectSort from '../atoms/SelectSort';
 import Pagination from 'material-ui-pagination';
@@ -102,14 +101,7 @@ class Users extends  React.Component{
             number: 1,
         };
     }
-    handlerClick(e) {
-        store.dispatch({
-            type: 'SORT_STATUS',
-            payload: {
-                status: e.target.value
-            }
-        });
-    }
+
     render(){
         console.log(this.props.statusProps);
 
