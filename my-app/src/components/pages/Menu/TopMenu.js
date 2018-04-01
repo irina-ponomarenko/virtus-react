@@ -2,6 +2,7 @@ import React from 'react';
 import './Menu.css';
 import Logo from '../../../assets/image/logo.png';
 import ProfileTopMenu from  './ProfileTopMenu';
+import Search from './Search';
 
 class TopMenu extends React.Component{
     render(){
@@ -16,7 +17,7 @@ class TopMenu extends React.Component{
                             Add
                             <i className="fa fa-plus"></i>
                         </button>
-                        <button type="button" className="buttonProject"><i className="fa fa-search"></i></button>
+                        <Search/>
                         <button type="button" className="buttonProject"><i className="fa fa-bell"></i></button>
                         <ProfileTopMenu history={this.props.history}/>
                     </div>

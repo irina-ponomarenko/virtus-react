@@ -36,7 +36,7 @@
 }
 .NavProfileProject{
     display: flex;
-    max-width: 440px;
+    max-width: 500px;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -113,4 +113,39 @@
     width: 100%;
     margin: 0 auto;
     z-index: 100;
+}
+.Search {
+    width: 0px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    float: right;
+    border: none;
+    position: relative;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+.Search:focus {
+    width: 200px;
+    border: 1px solid #fff;
+    background-color: #2f3242;
+    outline: none;
+}
+.SearchWrapper{
+    position: relative;
+}
+.SearchWrapper i{
+   position: absolute;
+    top: 12px;
+    left: 10px;
+    cursor: pointer;
+}
+.SearchWrapper:hover{
+    color: #2196f3;
+}
+.SearchWrapper i:hover{
+    color: #2196f3;
 }
