@@ -21,7 +21,8 @@
     "react-sweet-progress": "^1.1.0",
     "react-tap-event-plugin": "^3.0.2",
     "react-vis": "^1.9.2",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "sortablejs": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

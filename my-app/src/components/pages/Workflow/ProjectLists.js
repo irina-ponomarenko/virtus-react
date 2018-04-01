@@ -2,13 +2,74 @@ import React from 'react';
 import IconImg from '../../../assets/image/profileImg-2.png';
 import IconImg2 from '../../../assets/image/profileImg-4.png';
 import IconImg3 from '../../../assets/image/profileImg.png';
+import Sortable from 'sortablejs';
 import store from '../../../redux/store';
 
 class ProjectLists extends React.Component{
+    componentDidMount(){
+        var Project1 = this.firstBlock;
+        var sortable = Sortable.create(Project1, {
+            group: {
+                name: 'Project1',
+                put: ['Project2', 'Project3','Project4','Project5','Project6'],
+                pull: ['Project6', 'Project5','Project4','Project3','Project2']
+            },
+            animation: 100
+        });
+
+        var Project2 = this.secondBlock;
+        var sortable = Sortable.create(Project2, {
+            group: {
+                name: 'Project2',
+                put: ['Project1', 'Project3','Project4','Project5','Project6'],
+                pull: ['Project6', 'Project5','Project4','Project3','Project1']
+            },
+            animation: 100
+        });
+
+        var Project3 = this.thirdBlock;
+        var sortable = Sortable.create(Project3, {
+            group: {
+                name: 'Project3',
+                put: ['Project1', 'Project2','Project4','Project5','Project6'],
+                pull: ['Project6', 'Project5','Project4','Project2','Project1']
+            },
+            animation: 100
+        });
+        var Project4 = this.fourthBlock;
+        var sortable = Sortable.create(Project4, {
+            group: {
+                name: 'Project4',
+                put: ['Project1', 'Project2','Project3','Project5','Project6'],
+                pull: ['Project6', 'Project5','Project3','Project2','Project1']
+            },
+            animation: 100
+        });
+        var Project5 = this.fifthBlock;
+        var sortable = Sortable.create(Project5, {
+            group: {
+                name: 'Project5',
+                put: ['Project1', 'Project2','Project3','Project4','Project6'],
+                pull: ['Project6', 'Project4','Project3','Project2','Project1']
+            },
+            animation: 100
+        });
+        var Project6 = this.sixthBlock;
+        var sortable = Sortable.create(Project6, {
+            group: {
+                name: 'Project6',
+                put: ['Project1', 'Project2','Project3','Project4','Project5'],
+                pull: ['Project5', 'Project4','Project3','Project2','Project1']
+            },
+            animation: 100
+        });
+    }
     render(){
         const projectListUser =[
             {
                 titleHeader: 'Quened',
+                id: 'Project1',
+                ref: this.firstBlock,
                 price: 1500,
                 classHeader: 'fa-chevron-right',
                 projectList:  [
@@ -25,6 +86,8 @@ class ProjectLists extends React.Component{
             },
             {
                 titleHeader: 'Planning',
+                id: 'Project2',
+                ref: this.secondBlock,
                 price: 4100,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -68,6 +131,8 @@ class ProjectLists extends React.Component{
             },
             {
                 titleHeader: 'Design',
+                id: 'Project3',
+                ref: this.thirdBlock,
                 price: 5200,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -111,6 +176,8 @@ class ProjectLists extends React.Component{
             },
             {
                 titleHeader: 'Development',
+                id: 'Project4',
+                ref: this.fourthBlock,
                 price: 4200,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -145,6 +212,8 @@ class ProjectLists extends React.Component{
             },
             {
                 titleHeader: 'Testing',
+                id: 'Project5',
+                ref: this.fifthBlock,
                 price: 1500,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -161,6 +230,8 @@ class ProjectLists extends React.Component{
             },
             {
                 titleHeader: 'Completed',
+                id: 'Project6',
+                ref: this.sixthBlock,
                 price: 3700,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -232,7 +303,7 @@ class ProjectLists extends React.Component{
                                         </div>
                                         <i className={item.classHeader + " fa"} aria-hidden="true"></i>
                                     </header>
-                                    <ul className="ProjectList">
+                                    <ul className="ProjectList" id={item.id} ref={el => item.ref = el}>
                                         {
                                             item.projectList.map((newItem, newIndex) =>{
                                                 return(
