@@ -1,12 +1,12 @@
 import React from 'react';
-import Form from './Form';
+import HeaderLogin from './Header';
 import './Login.css';
 
 class Login extends React.Component {
     render() {
         return (
             <div className="WrapperLogin">
-                <Form history={this.props.history}/>
+                <HeaderLogin history={this.props.history}/>
             </div>
         );
     }
