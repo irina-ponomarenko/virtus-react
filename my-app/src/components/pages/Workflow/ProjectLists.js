@@ -69,7 +69,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Quened',
                 id: 'Project1',
-                ref: this.firstBlock,
+                ref: 'firstBlock',
                 price: 1500,
                 classHeader: 'fa-chevron-right',
                 projectList:  [
@@ -87,7 +87,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Planning',
                 id: 'Project2',
-                ref: this.secondBlock,
+                ref: 'secondBlock',
                 price: 4100,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -132,7 +132,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Design',
                 id: 'Project3',
-                ref: this.thirdBlock,
+                ref: 'thirdBlock',
                 price: 5200,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -177,7 +177,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Development',
                 id: 'Project4',
-                ref: this.fourthBlock,
+                ref: 'fourthBlock',
                 price: 4200,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -213,7 +213,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Testing',
                 id: 'Project5',
-                ref: this.fifthBlock,
+                ref: 'fifthBlock',
                 price: 1500,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -231,7 +231,7 @@ class ProjectLists extends React.Component{
             {
                 titleHeader: 'Completed',
                 id: 'Project6',
-                ref: this.sixthBlock,
+                ref: 'sixthBlock',
                 price: 3700,
                 classHeader: 'fa-chevron-right',
                 projectList: [
@@ -303,7 +303,7 @@ class ProjectLists extends React.Component{
                                         </div>
                                         <i className={item.classHeader + " fa"} aria-hidden="true"></i>
                                     </header>
-                                    <ul className="ProjectList" id={item.id} ref={el => item.ref = el}>
+                                    <ul className="ProjectList" id={item.id} ref={el => this[item.ref] = el}>
                                         {
                                             item.projectList.map((newItem, newIndex) =>{
                                                 return(

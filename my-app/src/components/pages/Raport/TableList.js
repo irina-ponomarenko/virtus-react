@@ -2,75 +2,138 @@ import React from 'react';
 
 
 class TableList extends  React.Component{
-    render() {
-        const TableList = [
+    constructor(){
+        super();
+        this.state = {
+            tableList: [
             {
-                text1: 'Lorem ipsum dolor sit amet tetur',
-                text2: '6 days',
-                text3: '358 000',
-                text4: '58 200',
-                text5: '25%',
-                text6: '$3.02',
-                text7: '$2.51',
-                text8: '$28.35',
-                text9: 'Active',
-                status: 'StatusActive'
+                campaing: 'Lorem ipsum dolor sit amet tetur',
+                time: '6 days',
+                views: '358 000',
+                visitors: '58 200',
+                ctr: '25%',
+                cpc: '$3.02',
+                cpv: '$2.51',
+                cpm: '$28.35',
+                status: 'Active',
+                statusActive: 'StatusActive'
             },
             {
-                text1: 'Sed do eiusmod tempor',
-                text2: '7 hours',
-                text3: '1 200',
-                text4: '800',
-                text5: '10%',
-                text6: '$8.45',
-                text7: '$6.13',
-                text8: '$45.22',
-                text9: 'Disable',
-                status: 'StatusDisabled'
+                campaing: 'Sed do eiusmod tempor',
+                time: '7 hours',
+                views: '1 200',
+                visitors: '800',
+                ctr: '10%',
+                cpc: '$8.45',
+                cpv: '$6.13',
+                cpm: '$45.22',
+                status: 'Disable',
+                statusActive: 'StatusDisabled'
             },
             {
-                text1: 'Consectetur adipisicing elit sed',
-                text2: '3 days',
-                text3: '69 000',
-                text4: '7 300',
-                text5: '19%',
-                text6: '$6.22',
-                text7: '$3.90',
-                text8: '$37.80',
-                text9: 'Active',
-                status: 'StatusActive'
+                campaing: 'Consectetur adipisicing elit sed',
+                time: '3 days',
+                views: '69 000',
+                visitors: '7 300',
+                ctr: '19%',
+                cpc: '$6.22',
+                cpv: '$3.90',
+                cpm: '$37.80',
+                status: 'Active',
+                statusActive: 'StatusActive'
             }
-        ];
+        ]
+        };
+        this.titleList = [
+            {
+                title: 'Campaing',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Time',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Views',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Visitors',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CTR',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPC',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPV',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPM',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Status',
+                chevron: 'fa-chevron-down'
+            }
+        ]
+    }
+    handleSortTable = (title, e) =>{
+        let sortList = this.state.tableList.sort(function (a, b) {
+            if (a[title.toLowerCase()]  > b[title.toLowerCase()]) {
+                return 1;
+            }
+            if (a[title.toLowerCase()] < b[title.toLowerCase()]) {
+                return -1;
+            }
+            return 0;
+        });
+        this.setState ({tableList: sortList});
+
+        console.log(sortList);
+    };
+
+
+    render() {
         return(
             <div className="TableList">
                 <table className="ProjectGraphList">
                     <thead>
                     <tr className="TableTitle">
-                        <th>Campaing <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>Time <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>Views <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>Visitors <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>CTR <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>CPC <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>CPV <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>CPM <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
-                        <th>Status <i className="fa fa-chevron-down" aria-hidden="true"></i></th>
+                        {
+                            this.titleList.map((item, index) =>{
+                                return(
+                                    <th key={index}>
+                                        {item.title}
+                                        <i className={"fa "+ item.chevron}
+                                           aria-hidden="true"
+                                           onClick={this.handleSortTable.bind(this, item.title)}>
+                                        </i>
+                                    </th>
+                                );
+                            })
+                        }
                     </tr>
                     </thead>
                     <tbody>
                     {
-                        TableList.map((item,index)=> {
+                        this.state.tableList.map((item,index)=> {
                             return(
                                 <tr className="TableInfo" key={index}>
-                                    <td><h2>{item.text1}</h2></td>
-                                    <td><h2>{item.text2}</h2></td>
-                                    <td><h2>{item.text3}</h2></td>
-                                    <td><h2>{item.text4}</h2></td>
-                                    <td><h2>{item.text5}</h2></td>
-                                    <td><h2>{item.text6}</h2></td>
-                                    <td><h2>{item.text7}</h2></td>
-                                    <td><h2>{item.text8}</h2></td>
-                                    <td className="StatusClass"><i className={item.status +" fa fa-circle"} aria-hidden="true"></i> <h2>{item.text9}</h2></td>
+                                    <td><h2>{item.campaing}</h2></td>
+                                    <td><h2>{item.time}</h2></td>
+                                    <td><h2>{item.views}</h2></td>
+                                    <td><h2>{item.visitors}</h2></td>
+                                    <td><h2>{item.ctr}</h2></td>
+                                    <td><h2>{item.cpc}</h2></td>
+                                    <td><h2>{item.cpv}</h2></td>
+                                    <td><h2>{item.cpm}</h2></td>
+                                    <td className="StatusClass"><i className={item.statusActive +" fa fa-circle"} aria-hidden="true"></i> <h2>{item.status}</h2></td>
                                 </tr>
                             )
                         })
