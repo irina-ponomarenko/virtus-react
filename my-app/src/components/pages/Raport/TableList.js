@@ -1,9 +1,49 @@
 import React from 'react';
+import SortHeader from './SortHeader';
 
 
 class TableList extends  React.Component{
     constructor(){
         super();
+        this.titleList = [
+            {
+                title: 'Campaing',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Time',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Views',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Visitors',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CTR',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPC',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPV',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'CPM',
+                chevron: 'fa-chevron-down'
+            },
+            {
+                title: 'Status',
+                chevron: 'fa-chevron-down'
+            }
+        ]
+
         this.state = {
             tableList: [
             {
@@ -44,45 +84,8 @@ class TableList extends  React.Component{
             }
         ]
         };
-        this.titleList = [
-            {
-                title: 'Campaing',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'Time',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'Views',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'Visitors',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'CTR',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'CPC',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'CPV',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'CPM',
-                chevron: 'fa-chevron-down'
-            },
-            {
-                title: 'Status',
-                chevron: 'fa-chevron-down'
-            }
-        ]
     }
+
     handleSortTable = (title, e) =>{
         let sortList = this.state.tableList.sort(function (a, b) {
             if (a[title.toLowerCase()]  > b[title.toLowerCase()]) {
@@ -94,10 +97,7 @@ class TableList extends  React.Component{
             return 0;
         });
         this.setState ({tableList: sortList});
-
-        console.log(sortList);
     };
-
 
     render() {
         return(
@@ -108,13 +108,11 @@ class TableList extends  React.Component{
                         {
                             this.titleList.map((item, index) =>{
                                 return(
-                                    <th key={index}>
-                                        {item.title}
-                                        <i className={"fa "+ item.chevron}
-                                           aria-hidden="true"
-                                           onClick={this.handleSortTable.bind(this, item.title)}>
-                                        </i>
-                                    </th>
+                                    <SortHeader
+                                        key={index}
+                                        data={item}
+                                        handler={this.handleSortTable.bind(this, item.title)}
+                                    />
                                 );
                             })
                         }
