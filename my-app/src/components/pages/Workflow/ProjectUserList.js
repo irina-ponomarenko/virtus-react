@@ -1,6 +1,7 @@
 import React from 'react';
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
+import { connect } from 'react-redux';
 
 import ProfileIcon4 from '../../../assets/image/profileImg-4.png';
 import ProfileIcon1 from '../../../assets/image/profileImg.png';
@@ -15,107 +16,107 @@ class ProjectUserList extends  React.Component{
 
         this.userList = [
             {
-                title1: 'New website',
-                text1: 'Microsoft',
-                title2: '$2300',
-                title3: '15 May 2016',
-                text2: '10 days left',
-                title4: '40 hours',
+                titleProject: 'New website',
+                nameCompany: 'Microsoft',
+                titlePrice: '$2300',
+                date: '15 May 2016',
+                leftTime: '10 days left',
+                lasting: '40 hours',
                 progress: 70,
-                title5: 'Development',
+                completedInfo: 'Development',
                 imgIcon: ProfileIcon4,
-                title6: 'Dominic Lynton',
-                text3: 'Front End Dev',
+                namePerfomer: 'Dominic Lynton',
+                post: 'Front End Dev',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'BlueBorder'
             },
             {
-                title1: 'Landing page',
-                text1: 'Google',
-                title2: '$1250',
-                title3: '21 May 2016',
-                text2: '23 days left',
-                title4: '7 hours',
+                titleProject: 'Landing page',
+                nameCompany: 'Google',
+                titlePrice: '$1250',
+                date: '21 May 2016',
+                leftTime: '23 days left',
+                lasting: '7 hours',
                 progress: 15,
-                title5: 'Planning',
+                completedInfo: 'Planning',
                 imgIcon: ProfileIcon5,
-                title6: 'Lyan Roach',
-                text3: 'UX/UI Designer',
+                namePerfomer: 'Lyan Roach',
+                post: 'UX/UI Designer',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'BlueBorder'
             },
             {
-                title1: 'New dashboard',
-                text1: 'Symu.co',
-                title2: '$5100',
-                title3: '15 May 2016',
-                text2: '2 days left',
-                title4: '56 hours',
+                titleProject: 'New dashboard',
+                nameCompany: 'Symu.co',
+                titlePrice: '$5100',
+                date: '15 May 2016',
+                leftTime: '2 days left',
+                lasting: '56 hours',
                 progress: 90,
-                title5: 'Testing',
+                completedInfo: 'Testing',
                 imgIcon: ProfileIcon2,
-                title6: 'Michelle Stewart',
-                text3: 'Account',
+                namePerfomer: 'Michelle Stewart',
+                post: 'Account',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'BlueBorder'
             },
             {
-                title1: 'New logo',
-                text1: 'JCD.pl',
-                title2: '$900',
-                title3: '15 June 2015',
-                text2: '30 days left',
-                title4: '10 hours',
+                titleProject: 'New logo',
+                nameCompany: 'JCD.pl',
+                titlePrice: '$900',
+                date: '15 June 2015',
+                leftTime: '30 days left',
+                lasting: '10 hours',
                 progress: 40,
-                title5: 'Design',
+                completedInfo: 'Design',
                 imgIcon: ProfileIcon5,
-                title6: 'Lyan Roach',
-                text3: 'UX/UI Designer',
+                namePerfomer: 'Lyan Roach',
+                post: 'UX/UI Designer',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'BlueBorder'
             },
             {
-                title1: 'Landing page',
-                text1: 'Symu.co',
-                title2: '$1500',
-                title3: '8 August 2016',
-                text2: '2 months left',
-                title4: '0 hours',
+                titleProject: 'Landing page',
+                nameCompany: 'Symu.co',
+                titlePrice: '$1500',
+                date: '8 August 2016',
+                leftTime: '2 months left',
+                lasting: '0 hours',
                 progress: 0,
-                title5: 'Quened',
+                completedInfo: 'Quened',
                 imgIcon: ProfileIcon2,
-                title6: 'Michelle Stewart',
-                text3: 'Account',
+                namePerfomer: 'Michelle Stewart',
+                post: 'Account',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'WhiteBorder'
             },
             {
-                title1: 'Mobile app',
-                text1: 'Facebook',
-                title2: '$4300',
-                title3: '5th May 2016',
-                text2: 'Completed',
-                title4: '59 hours',
+                titleProject: 'Mobile app',
+                nameCompany: 'Facebook',
+                titlePrice: '$4300',
+                date: '5th May 2016',
+                leftTime: 'Completed',
+                lasting: '59 hours',
                 progress: 100,
-                title5: 'Completed',
+                completedInfo: 'Completed',
                 imgIcon: ProfileIcon2,
-                title6: 'Michelle Stewart',
-                text3: 'Account',
+                namePerfomer: 'Michelle Stewart',
+                post: 'Account',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'GreenBorder'
             },
             {
-                title1: 'Wordpress theme',
-                text1: 'Themeforest',
-                title2: '$1300',
-                title3: '2th May 2016',
-                text2: 'Completed',
-                title4: '30 hours',
+                titleProject: 'Wordpress theme',
+                nameCompany: 'Themeforest',
+                titlePrice: '$1300',
+                date: '2th May 2016',
+                leftTime: 'Completed',
+                lasting: '30 hours',
                 progress: 100,
-                title5: 'Completed',
+                completedInfo: 'Completed',
                 imgIcon: ProfileIcon2,
-                title6: 'Michelle Stewart',
-                text3: 'Account',
+                namePerfomer: 'Michelle Stewart',
+                post: 'Account',
                 class: 'fa fa-ellipsis-v',
                 classBorder: 'GreenBorder'
             }
@@ -134,6 +135,27 @@ class ProjectUserList extends  React.Component{
     }
 
     render(){
+        let sortProjectList;
+        const sortList = this.userList.filter((item) => {
+            if (item.nameCompany === "Microsoft"){
+                return item;
+            }
+            else if (item.nameCompany === "Google"){
+                return item;
+            }
+            else if (item.nameCompany === "Symu.co"){
+                return item;
+            }
+            else if (item.nameCompany === "JCD.pl"){
+                return item;
+            }
+            else if (item.nameCompany === "Facebook"){
+                return item;
+            }
+            else if (item.nameCompany === "Themeforest"){
+                return item;
+            }
+        });
         return(
             <div className="AllProjectList noneOverflow">
                 <table className="ProjectUserList">
@@ -164,24 +186,24 @@ class ProjectUserList extends  React.Component{
                             return(
                                 <tr className="userInfo" key={index}>
                                     <td className={rowClass + " infoProject"}>
-                                        <h2>{item.title1}</h2>
-                                        <p>{item.text1}</p>
+                                        <h2>{item.titleProject}</h2>
+                                        <p>{item.nameCompany}</p>
                                     </td>
                                     <td className="valueProject">
-                                        <h2>{item.title2}</h2>
+                                        <h2>{item.titlePrice}</h2>
                                     </td>
                                     <td className="infoProject">
-                                        <h2>{item.title3}</h2>
-                                        <p>{item.text2}</p>
+                                        <h2>{item.date}</h2>
+                                        <p>{item.leftTime}</p>
                                     </td>
                                     <td className="timeProject">
-                                        <h2>{item.title4}</h2>
+                                        <h2>{item.lasting}</h2>
                                     </td>
                                     <td className="progressProject">
                                         <Progress percent={item.progress} />
                                     </td>
                                     <td className="statusProject">
-                                        <h2>{item.title5}</h2>
+                                        <h2>{item.completedInfo}</h2>
                                     </td>
                                     <td className="profileUser">
                                         <div className="userInfo">
@@ -190,8 +212,8 @@ class ProjectUserList extends  React.Component{
                                                     <img src={item.imgIcon} alt="User icon"/>
                                                 </div>
                                                 <div className="TitleUser">
-                                                    <h2>{item.title6}</h2>
-                                                    <p>{item.text3}</p>
+                                                    <h2>{item.namePerfomer}</h2>
+                                                    <p>{item.post}</p>
                                                 </div>
                                                 <i className={item.class} aria-hidden="true"></i>
                                             </div>
@@ -207,4 +229,9 @@ class ProjectUserList extends  React.Component{
         );
     }
 }
-export default ProjectUserList;
+const mapState = (state, props) => {
+    return {
+        sortProject: state.sortProject
+    }
+};
+export default connect (mapState) (ProjectUserList);

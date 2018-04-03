@@ -5,8 +5,10 @@ class SelectSort extends React.Component {
     onChange = (e) => {
         store.dispatch({
             type: 'SORT_STATUS',
+            typePage: 'PROJECT_SORT',
             payload: {
-                status: e.target.value
+                status: e.target.value,
+                sortProject: e.target.value
             }
         });
 

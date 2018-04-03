@@ -103,8 +103,6 @@ class Users extends  React.Component{
     }
 
     render(){
-        console.log(this.props.statusProps);
-
         let activeFirst;
         const listActive = this.TableUserList.filter((item) => {
             if (item.statusUser.class !== "noActive"){
@@ -192,8 +190,6 @@ class Users extends  React.Component{
     }
 }
 const mapState = (state, props) => {
-    console.log(state);
-
     return {
         statusProps: state.status
     }

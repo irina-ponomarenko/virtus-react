@@ -13,7 +13,6 @@ class Workflow extends React.Component{
             "Facebook",
             "Themeforest"
         ];
-
         return(
             <div className="WrapperProject">
                 <HeaderProject
