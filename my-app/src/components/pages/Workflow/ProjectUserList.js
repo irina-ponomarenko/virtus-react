@@ -135,27 +135,15 @@ class ProjectUserList extends  React.Component{
     }
 
     render(){
-        let sortProjectList;
         const sortList = this.userList.filter((item) => {
-            if (item.nameCompany === "Microsoft"){
+            if (item.nameCompany === this.props.status){
                 return item;
             }
-            else if (item.nameCompany === "Google"){
-                return item;
-            }
-            else if (item.nameCompany === "Symu.co"){
-                return item;
-            }
-            else if (item.nameCompany === "JCD.pl"){
-                return item;
-            }
-            else if (item.nameCompany === "Facebook"){
-                return item;
-            }
-            else if (item.nameCompany === "Themeforest"){
-                return item;
+            else if (this.props.status === 'All') {
+                return true;
             }
         });
+        console.log(sortList)
         return(
             <div className="AllProjectList noneOverflow">
                 <table className="ProjectUserList">
@@ -172,7 +160,7 @@ class ProjectUserList extends  React.Component{
                     </thead>
                     <tbody>
                     {
-                        this.userList.map((item,index) =>{
+                        sortList.map((item,index) =>{
                             let rowClass;
                             if (item.progress === 0) {
                                 rowClass = "WhiteBorder";
@@ -231,7 +219,7 @@ class ProjectUserList extends  React.Component{
 }
 const mapState = (state, props) => {
     return {
-        sortProject: state.sortProject
+        status: state.status
     }
 };
 export default connect (mapState) (ProjectUserList);

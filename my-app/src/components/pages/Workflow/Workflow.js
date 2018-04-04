@@ -6,6 +6,7 @@ import ProjectUserList from './ProjectUserList';
 class Workflow extends React.Component{
     render(){
         const forPagesSelect = [
+            "All",
             "Microsoft",
             "Google",
             "Symu.co",

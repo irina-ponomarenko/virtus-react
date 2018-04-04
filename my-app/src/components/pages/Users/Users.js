@@ -113,6 +113,7 @@ class Users extends  React.Component{
             if (item.statusUser.class === "noActive"){
                 return item;
             }
+
         });
         console.log(listNonActive);
         const status = this.props.statusProps || "Active first";

@@ -11,9 +11,6 @@ const rootReducer = (state = initState, action) => {
         case 'PROJECT_LENGTH':
             return { sumProject: action.payload.sumProject };
 
-        case 'PROJECT_SORT':
-            return { sortProject: action.payload.sortProject };
-
         default:
             return state;
     }
