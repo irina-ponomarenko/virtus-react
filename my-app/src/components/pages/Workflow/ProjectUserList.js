@@ -4,9 +4,7 @@ import "react-sweet-progress/lib/style.css";
 import { connect } from 'react-redux';
 
 import ProfileIcon4 from '../../../assets/image/profileImg-4.png';
-import ProfileIcon1 from '../../../assets/image/profileImg.png';
 import ProfileIcon2 from '../../../assets/image/profileImg-2.png';
-import ProfileIcon3 from '../../../assets/image/profileImg-3.png';
 import ProfileIcon5 from '../../../assets/image/profileImg-5.png';
 import store from '../../../redux/store';
 
@@ -135,7 +133,7 @@ class ProjectUserList extends  React.Component{
     }
 
     render(){
-        const sortList = this.userList.filter((item) => {
+        const sortList = this.userList.filter((item) =>{
             if (item.nameCompany === this.props.status){
                 return item;
             }

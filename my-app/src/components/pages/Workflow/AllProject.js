@@ -1,7 +1,6 @@
 import React from 'react';
 import HeaderProject from './HeaderProject';
 import ProjectLists from './ProjectLists';
-import { connect } from 'react-redux';
 
 class AllProject extends React.Component{
     render(){

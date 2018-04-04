@@ -16,6 +16,7 @@
     height: 60px;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 .WrapperProfile{
     display: flex;
@@ -26,9 +27,6 @@
     cursor: pointer;
     font-size: 15px !important;
     color: #fff;
-}
-.WrapperProfile:hover i{
-    color: #2196f3;
 }
 .ProfileTopMenu img{
     border-radius: 100%;
@@ -148,4 +146,52 @@
 }
 .SearchWrapper i:hover{
     color: #2196f3;
+}
+.DropDownUser{
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    background: #3a3e52;
+    position: absolute;
+    top: 96px;
+    right: 10px;
+    box-shadow: 0px 10px 26px 0px rgba(42,44,59,1);
+}
+.DropDownUser button{
+    border: none;
+}
+.DropDownUser a,
+.DropDownUser button{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #505464;
+}
+.DropDownUser a i,
+.DropDownUser button i{
+    margin-right: 10px;
+}
+.DropDownUser:hover{
+    background: #3a3e52 !important;
+}
+.toggle-enter{
+    opacity: 0.01;
+    transition : all .3s ease-out;
+}
+.toggle-enter.toggle-enter-active{
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.toggle-leave {
+    opacity: 1;
+    transition : all .3s ease-out;
+}
+.toggle-leave.toggle-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }
