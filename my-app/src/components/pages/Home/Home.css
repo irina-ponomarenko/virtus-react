@@ -80,6 +80,7 @@
     align-items: center;
     padding: 25px;
     border-bottom: 1px solid #505464;
+    cursor: pointer;
 }
 .ScrollContainer{
     max-height: 350px;
@@ -91,7 +92,7 @@
 }
 .TitleInbox span{
     font-size: 14px;
-    color: #2196f3;
+    color: #9ca1b2;
 }
 .TitleInbox{
     display: flex;
@@ -105,8 +106,8 @@
     margin: 0;
     line-height: 28px;
 }
-.OldMessage{
-    color: #9ca1b2 !important;
+.MessageCame{
+     color: #2196f3 !important;
 }
 .HeaderContainer span{
     color: #2196f3;
