@@ -131,8 +131,7 @@ class ProjectUserList extends  React.Component{
             }
         });
     }
-
-    render(){
+        render() {
         const sortList = this.userList.filter((item) =>{
             if (item.nameCompany === this.props.status){
                 return item;
@@ -141,7 +140,7 @@ class ProjectUserList extends  React.Component{
                 return true;
             }
         });
-        console.log(sortList)
+
         return(
             <div className="AllProjectList noneOverflow">
                 <table className="ProjectUserList">

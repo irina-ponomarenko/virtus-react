@@ -6,6 +6,10 @@ import Search from './Search';
 
 class TopMenu extends React.Component{
     render(){
+        let updateTime = function(){
+            document.getElementById("NewMessageBell").style.display = "block"
+        };
+        setTimeout(updateTime, 7000);
         return(
             <div className="WrapperMenu">
                 <div className="TopMenu">
@@ -18,7 +22,10 @@ class TopMenu extends React.Component{
                             <i className="fa fa-plus"></i>
                         </button>
                         <Search/>
-                        <button type="button" className="buttonProject"><i className="fa fa-bell"></i></button>
+                        <button type="button" className="buttonProject"><i className="fa fa-bell"></i>
+                            <div className="NewMessageBell" id="NewMessageBell">
+                            </div>
+                        </button>
                         <ProfileTopMenu history={this.props.history}/>
                     </div>
                 </div>

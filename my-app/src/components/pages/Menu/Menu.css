@@ -51,9 +51,7 @@
 }
 .buttonProject{
     border: none;
-}
-.buttonProject i:hover{
-    color: #227bc5;
+    position: relative;
 }
 .addButton{
     width: 133px;
@@ -88,6 +86,7 @@
 .LeftBar ul{
     margin: 0;
     padding-top: 30px;
+    position: relative;
 }
 .LeftBar ul li{
     margin-top: 70px;
@@ -176,8 +175,9 @@
 .DropDownUser button i{
     margin-right: 10px;
 }
-.DropDownUser:hover{
-    background: #3a3e52 !important;
+.DropDownUser a:hover,
+.DropDownUser button:hover{
+    background: #2196f3;
 }
 .toggle-enter{
     opacity: 0.01;
@@ -194,4 +194,20 @@
 .toggle-leave.toggle-leave-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
+}
+.NewMessage,
+.NewMessageBell{
+    position: absolute;
+    left: 52px;
+    top: 392px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: #2196f3;
+    display: none;
+}
+.NewMessageBell{
+    right: 0;
+    left: 17px;
+    top: -1px;
 }

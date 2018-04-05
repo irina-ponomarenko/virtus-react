@@ -25,6 +25,12 @@ class LeftBar extends React.Component {
                 className: 'fa fa-users'
             }
         ];
+
+        let updateTime = function(){
+            document.getElementById("NewMessage").style.display = "block"
+        };
+        setTimeout(updateTime, 7000);
+
         return (
             <div>
                 <div className="LeftBar">
@@ -39,6 +45,8 @@ class LeftBar extends React.Component {
                             </li>
                         )}
                     </ul>
+                    <div className="NewMessage" id="NewMessage">
+                    </div>
                 </div>
             </div>
         )
