@@ -9,6 +9,9 @@ import ProfileIcon5 from '../../../assets/image/profileImg-5.png';
 import store from '../../../redux/store';
 
 class ProjectUserList extends  React.Component{
+//     ProjectUserList.defaultProps = {
+//       status: false
+// };
     constructor(){
         super();
 
@@ -120,7 +123,6 @@ class ProjectUserList extends  React.Component{
             }
         ];
     }
-
     componentDidMount(){
         let sumItemsUsers = this.userList.length;
 
@@ -132,6 +134,7 @@ class ProjectUserList extends  React.Component{
         });
     }
         render() {
+
         const sortList = this.userList.filter((item) =>{
             if (item.nameCompany === this.props.status){
                 return item;

@@ -57,7 +57,7 @@ class ListInBox extends  React.Component{
                 <div className="ScrollContainer">
                     {
                         this.ListInBox.map((item, index) =>
-                            <div className="WrapperInbox" key={index} onClick={this.messageClick}>
+                            <div className="WrapperInbox" key={index}>
                                 <div className="IconUser">
                                     <img src={item.iconImage} alt="Icon user"/>
                                 </div>
