@@ -13,6 +13,7 @@ class ChatList extends React.Component{
                 return SendButton.style.display="none";
             SendButton.style.display="block"
         };
+        console.log(Message.onInput())
     }
     render(){
         return(
