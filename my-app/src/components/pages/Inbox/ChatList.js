@@ -4,11 +4,9 @@ import Profile1 from '../../../assets/image/profileImg.png';
 import ButtonSend from '../../../assets/image/send_chat.svg';
 
 class ChatList extends React.Component{
-    constructor(){
-        super();
-
-        var SendButton=document.querySelector("SendButton");
-        var Message=document.querySelector("Message");
+    componentDidMount(){
+        var SendButton=document.querySelector("#SendButton");
+        var Message=document.querySelector("#Message");
 
         Message.onInput=function(){
             if(this.value==="")
@@ -16,7 +14,6 @@ class ChatList extends React.Component{
             SendButton.style.display="block"
         };
     }
-
     render(){
         return(
             <div className="ChatList">
