@@ -245,3 +245,15 @@
     border-radius: 100%;
     box-shadow: 0px 0px 0px 3px rgba(64,67,89,1);
 }
+.WriteMessage button{
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.WriteMessage button img{
+    width: 20px;
+}

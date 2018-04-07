@@ -1,8 +1,22 @@
 import React from 'react';
 import Profile5 from '../../../assets/image/profileImg-5.png';
 import Profile1 from '../../../assets/image/profileImg.png';
+import ButtonSend from '../../../assets/image/send_chat.svg';
 
 class ChatList extends React.Component{
+    constructor(){
+        super();
+
+        var SendButton=document.querySelector("SendButton");
+        var Message=document.querySelector("Message");
+
+        Message.onInput=function(){
+            if(this.value==="")
+                return SendButton.style.display="none";
+            SendButton.style.display="block"
+        };
+    }
+
     render(){
         return(
             <div className="ChatList">
@@ -53,6 +67,7 @@ class ChatList extends React.Component{
                 </div>
                 <div className="WriteMessage">
                     <input type="text" id="Message" placeholder="Write a message"/>
+                    <button id="SendButton"><img src={ButtonSend}/></button>
                     <i className="fa fa-paperclip" aria-hidden="true"></i>
                 </div>
             </div>
