@@ -8,7 +8,7 @@ import store from '../../../redux/store';
 class ProjectLists extends React.Component{
     componentDidMount(){
         var Project1 = this.firstBlock;
-        var sortable = Sortable.create(Project1, {
+        Sortable.create(Project1, {
             group: {
                 name: 'Project1',
                 put: ['Project2', 'Project3','Project4','Project5','Project6'],
@@ -18,7 +18,7 @@ class ProjectLists extends React.Component{
         });
 
         var Project2 = this.secondBlock;
-        var sortable = Sortable.create(Project2, {
+       Sortable.create(Project2, {
             group: {
                 name: 'Project2',
                 put: ['Project1', 'Project3','Project4','Project5','Project6'],
@@ -28,7 +28,7 @@ class ProjectLists extends React.Component{
         });
 
         var Project3 = this.thirdBlock;
-        var sortable = Sortable.create(Project3, {
+        Sortable.create(Project3, {
             group: {
                 name: 'Project3',
                 put: ['Project1', 'Project2','Project4','Project5','Project6'],
@@ -37,7 +37,7 @@ class ProjectLists extends React.Component{
             animation: 100
         });
         var Project4 = this.fourthBlock;
-        var sortable = Sortable.create(Project4, {
+        Sortable.create(Project4, {
             group: {
                 name: 'Project4',
                 put: ['Project1', 'Project2','Project3','Project5','Project6'],
@@ -46,7 +46,7 @@ class ProjectLists extends React.Component{
             animation: 100
         });
         var Project5 = this.fifthBlock;
-        var sortable = Sortable.create(Project5, {
+        Sortable.create(Project5, {
             group: {
                 name: 'Project5',
                 put: ['Project1', 'Project2','Project3','Project4','Project6'],
@@ -55,7 +55,7 @@ class ProjectLists extends React.Component{
             animation: 100
         });
         var Project6 = this.sixthBlock;
-        var sortable = Sortable.create(Project6, {
+        Sortable.create(Project6, {
             group: {
                 name: 'Project6',
                 put: ['Project1', 'Project2','Project3','Project4','Project5'],

@@ -2,17 +2,18 @@ const initState = {};
 
 const rootReducer = (state = initState, action) => {
     switch (action.type) {
-        ...state
         case 'SORT_STATUS':
-            return { status: action.payload.status };
+            return {...state,
+                status: action.payload.status };
 
-        ...state
         case 'FILTER':
-            return { filter: action.payload.filter };
+            return {
+                ...state,
+                filter: action.payload.filter };
 
-        ...state
         case 'PROJECT_LENGTH':
-            return { sumProject: action.payload.sumProject };
+            return { ...state,
+                sumProject: action.payload.sumProject };
 
         default:
             return state;
