@@ -5,15 +5,13 @@ import ButtonSend from '../../../assets/image/send_chat.svg';
 
 class ChatList extends React.Component{
     componentDidMount(){
-        var SendButton=document.querySelector("#SendButton");
-        var Message=document.querySelector("#Message");
-
-        Message.onInput=function(){
-            if(this.value==="")
-                return SendButton.style.display="none";
-            SendButton.style.display="block"
+        document.getElementById("Message").onkeyup= function(){
+            var sendButtom = document.getElementById("SendButton").style;
+            if (/[А-Яа-я]/.test(this.value))
+                sendButtom.display= "none";
+            else
+                sendButtom.display= "block";
         };
-        console.log(Message.onInput())
     }
     render(){
         return(
