@@ -26,7 +26,7 @@ const App = () =>{
                 <PrivateLayout exact path="/workflow" component={Workflow} />
                 <PrivateLayout exact path="/all_project" component={AllProject}/>
                 <PrivateLayout exact path="/raport" component={Raport}/>
-                <PrivateLayout exact path="/inbox" component={Inbox}/>
+                <PrivateLayout exact path="/inbox/:counter?" component={Inbox}/>
                 <PrivateLayout exact path="/users" component={Users}/>
 
                 <Route component={NotFound} />
