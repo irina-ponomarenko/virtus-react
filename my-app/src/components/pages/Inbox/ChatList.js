@@ -1,74 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Profile5 from '../../../assets/image/profileImg-5.png';
-import Profile1 from '../../../assets/image/profileImg.png';
 import ButtonSend from '../../../assets/image/send_chat.svg';
 
-
-
-// const userFirst = [{
-//     username: "Kevin Hsu",
-//     content: 'Hello World!',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "Alice Chen",
-//     content: 'Love it! :heart:',
-//     img: Profile1,
-//     date: new Date()
-// }, {
-//     username: "Kevin Hsu",
-//     content: 'Check out my Github at https://github.com/WigoHunter',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "KevHs",
-//     content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
-//     img: Profile1,
-//     date: new Date()
-// }, {
-//     username: "Kevin Hsu",
-//     content: 'So',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "Kevin Hsu",
-//     content: 'Chilltime is going to be an app for you to view videos with friends',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "Kevin Hsu",
-//     content: 'You can sign-up now to try out our private beta!',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "Alice Chen",
-//     content: 'Definitely! Sounds great!',
-//     img: Profile1,
-//     date: new Date()
-// }];
-//
-//
-// const userSecond = [{
-//     username: "Kevin Hsu",
-//     content: 'Hello World!',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "Alice Chen",
-//     content: 'Love it! :heart:',
-//     img: Profile1,
-//     date: new Date()
-// }, {
-//     username: "Kevin Hsu",
-//     content: 'Check out my Github at https://github.com/WigoHunter',
-//     img: Profile5,
-//     date: new Date()
-// }, {
-//     username: "KevHs",
-//     content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
-//     img: Profile1,
-//     date: new Date()
-// }]
 
 class ChatList extends React.Component{
     constructor(props) {
@@ -80,15 +14,17 @@ class ChatList extends React.Component{
 
         this.submitMessage = this.submitMessage.bind(this);
     }
-    // componentDidMount(){
-    //     document.getElementById("Message").onkeyup= function(){
-    //         var sendButtom = document.getElementById("SendButton").style;
-    //         if (/[А-Яа-я]/.test(this.value))
-    //             sendButtom.display= "none";
-    //         else
-    //             sendButtom.display= "block";
-    //     };
-    // }
+    componentDidMount() {
+        this.scrollToBot();
+    }
+
+    componentDidUpdate() {
+        this.scrollToBot();
+    }
+
+    scrollToBot() {
+        this.chats.scrollTop = this.chats.scrollHeight;
+    }
 
     handlerMsg() {
         var sendButtom = this.sendButton.style;
@@ -100,25 +36,7 @@ class ChatList extends React.Component{
             sendButtom.display = "block";
         }
     }
-    //
-    // submitMessage(e) {
-    //     e.preventDefault();
-    //
-    //     const input = this.refs.msg;
-    //     const newList = [].concat(this.state.chats);
-    //
-    //     newList.push({
-    //         username: "Kevin Hsu",
-    //         content: <p>{ReactDOM.findDOMNode(input).value}</p>,
-    //         img: "http://i.imgur.com/Tj5DGiO.jpg",
-    //     });
-    //
-    //     this.setState({
-    //         chats: newList
-    //     }, () => {
-    //         ReactDOM.findDOMNode(input).value = "";
-    //     });
-    // }
+
     submitMessage(e){
         e.preventDefault();
         const newMessage = this.sendText.value.trim();
@@ -138,11 +56,13 @@ class ChatList extends React.Component{
     }
     render(){
         const username = "Kevin Hsu";
-        const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augest']
+        const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augest'];
+        const { chats } = this.state;
+
 
         return(
             <div className="ChatList">
-                <ul>
+                <ul ref={el => this.chats = el}>
                     {
                         this.state.chats.map((item,index)=>{
                             return(

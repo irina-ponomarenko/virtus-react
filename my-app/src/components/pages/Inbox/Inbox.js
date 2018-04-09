@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import InboxLis from './InboxList';
 import ChatList from './ChatList';
 import UserInfoList from './UserInfoList';
+import Profile5 from '../../../assets/image/profileImg-5.png';
+import Profile1 from '../../../assets/image/profileImg.png';
 
 const fullList = [
     {
@@ -84,13 +86,13 @@ const fullList = [
 ];
 
 class Inbox extends React.Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         // if (this.props.history.params.counter === 1) {
-        if (this.props.match.params === '1') {
+        if (props.match.params.counter === '1') {
             this.list = fullList[0];
         }
-        else if (this.props.match.params.counter === '2') {
+        else if (props.match.params.counter === '2') {
             this.list = fullList[1];
         }
         else {
