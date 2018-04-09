@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Profile5 from '../../../assets/image/profileImg-5.png';
+import Profile1 from '../../../assets/image/profileImg.png';
 import ButtonSend from '../../../assets/image/send_chat.svg';
 
 
@@ -44,9 +43,9 @@ class ChatList extends React.Component{
         const newChatsList = [].concat(this.state.chats);
 
         newChatsList.push({
-            username: "Kevin Hsu",
+            username: "Rey Colin",
             content: newMessage,
-            img: Profile5,
+            img: Profile1,
             date: new Date()
         });
         this.setState({
@@ -56,7 +55,7 @@ class ChatList extends React.Component{
         })
     }
     render(){
-        const username = "Kevin Hsu";
+        const username = "Rey Colin";
         const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augest'];
         const { chats } = this.state;
 

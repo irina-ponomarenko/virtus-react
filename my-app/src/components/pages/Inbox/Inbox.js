@@ -71,17 +71,17 @@ const fullList = [
             img: Profile5,
             date: new Date()
         }, {
-            username: "Alice Chen",
+            username: "Rey Colin",
             content: 'Love it! :heart:',
             img: Profile1,
             date: new Date()
         }, {
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'Check out my Github at https://github.com/WigoHunter',
             img: Profile5,
             date: new Date()
         }, {
-            username: "KevHs",
+            username: "Rey Colin",
             content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
             img: Profile1,
             date: new Date()
@@ -101,7 +101,73 @@ const fullList = [
             img: Profile5,
             date: new Date()
         }, {
-            username: "Alice Chen",
+            username: "Rey Colin",
+            content: 'Definitely! Sounds great!',
+            img: Profile1,
+            date: new Date()
+        }]
+    },
+    {
+        userInfo: {
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon2,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Rey Colin',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
+            emailTitle: 'Email',
+            email: 'lyallroach@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
+        },
+        listMsg: [{
+            username: "Lyall Roach",
+            content: 'Hello World!',
+            img: Profile5,
+            date: new Date()
+        }, {
+            username: "Rey Colin",
+            content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
+            img: Profile1,
+            date: new Date()
+        }, {
+            username: "Rey Colin",
+            content: 'Definitely! Sounds great!',
+            img: Profile1,
+            date: new Date()
+        }]
+    },
+    {
+        userInfo: {
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Lyall Roach',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
+            emailTitle: 'Email',
+            email: 'lyallroach@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
+        },
+        listMsg: [{
+            username: "Lyall Roach",
+            content: 'Hello World!',
+            img: Profile5,
+            date: new Date()
+        }, {
+            username: "Rey Colin",
+            content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
+            img: Profile1,
+            date: new Date()
+        }, {
+            username: "Rey Colin",
             content: 'Definitely! Sounds great!',
             img: Profile1,
             date: new Date()
@@ -110,23 +176,22 @@ const fullList = [
 ];
 
 class Inbox extends React.Component{
-    constructor(props) {
-        super(props);
-        // if (this.props.history.params.counter === 1) {
-        if (props.match.params.counter === '1') {
+    render() {
+        if (this.props.match.params.counter === '1') {
             this.list = fullList[0];
         }
-        else if (props.match.params.counter === '2') {
+        else if (this.props.match.params.counter === '2') {
             this.list = fullList[1];
+        }
+        else if (this.props.match.params.counter === '3') {
+            this.list = fullList[2];
+        }
+        else if (this.props.match.params.counter === '4') {
+            this.list = fullList[3];
         }
         else {
             this.list = fullList[0];
         }
-
-        // this.list.userInfo
-        // this.list.listMsg
-    }
-    render() {
         const forPagesSelect = ["Date","Week","Month"];
         return(
             <div className="WrapperProject">
