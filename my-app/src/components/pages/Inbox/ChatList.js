@@ -12,6 +12,7 @@ class ChatList extends React.Component{
             chats: props.listMessage
         };
 
+        this.scrollToBot = this.scrollToBot.bind(this);
         this.submitMessage = this.submitMessage.bind(this);
     }
     componentDidMount() {
@@ -62,7 +63,7 @@ class ChatList extends React.Component{
 
         return(
             <div className="ChatList">
-                <ul ref={el => this.chats = el}>
+                <ul ref={el => this.chats = el} >
                     {
                         this.state.chats.map((item,index)=>{
                             return(

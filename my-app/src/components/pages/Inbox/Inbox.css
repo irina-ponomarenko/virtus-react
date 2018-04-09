@@ -103,7 +103,9 @@
 }
 .NextUserMessage{
     align-self: flex-end;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
 }
 .ChatList{
     width: 100%;
@@ -111,6 +113,10 @@
     flex-direction: column;
     padding: 30px 40px;
     box-shadow: inset -24px 0px 42px -2px rgba(23,24,32,0.3);
+    max-height: 100vh;
+}
+.ChatList ul{
+    overflow-y: scroll;
 }
 .WrapperMessageChat{
     display: flex;
@@ -128,7 +134,7 @@
     padding-left: 22px;
     padding-bottom: 22px;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     margin-bottom: 15px;
 }
 .MessageText p{
