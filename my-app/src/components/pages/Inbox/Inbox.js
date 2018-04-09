@@ -16,7 +16,7 @@ const fullList = [
             profileIcon: BigProphileIcon,
             titleSpan: 'UX/UI Designer',
             userName: 'Lyall Roach',
-            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
             emailTitle: 'Email',
             email: 'lyallroach@gmail.com',
             phoneTitle: 'Phone',
@@ -25,7 +25,6 @@ const fullList = [
             adress: '65 Lorem St, Warsaw, PL',
             organizationTitle: 'Organization',
             organization: 'Symu.co'
-
         },
         listMsg: [{
             username: "Kevin Hsu",
@@ -51,8 +50,19 @@ const fullList = [
     },
     {
         userInfo: {
-            username: 'ss',
-            desc: 'dddds'
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Lyall Roach',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
+            emailTitle: 'Email',
+            email: 'lyallroach@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
         },
         listMsg: [{
             username: "Kevin Hsu",
