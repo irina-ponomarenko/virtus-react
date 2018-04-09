@@ -3,8 +3,11 @@ import React from 'react';
 import IconUser from '../../../assets/image/profileImg.png';
 
 class ListUser extends React.Component{
-    render(){
-        const ListUser = [
+
+    constructor(props) {
+        super(props);
+
+       this.ListUser = [
             {
                 icon: IconUser,
                 title: 'Mobile App',
@@ -42,13 +45,16 @@ class ListUser extends React.Component{
                 class: 'fa fa-ellipsis-v'
             }
         ];
+    }
+        render(){
+
         return(
             <div className="Container">
                 <header className="HeaderContainer">
                     <h2>Your projects</h2>
                 </header>
                 {
-                    ListUser.map((item,index) =>
+                    this.ListUser.map((item,index) =>
                         <div className="WrapperUserBlock" key={index}>
                             <div className="UserBlock">
                                 <div className="IconUser">

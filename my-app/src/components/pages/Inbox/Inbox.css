@@ -95,16 +95,24 @@
 .WrapperMessageChat img{
     width:60px;
     border-radius: 60px;
-    margin-right: 23px;
 }
 .NextUserMessage img{
     margin: 0;
-    margin-left: 23px;
 }
 .NextUserMessage{
     align-self: flex-end;
     display: flex;
     justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin-right: 23px;
+}
+.NextUserMessage .MessageText{
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    margin-right: 23px;
+}
+.NextUserMessage span{
+    display: flex;
     flex-direction: row-reverse;
 }
 .ChatList{
@@ -117,12 +125,11 @@
 }
 .ChatList ul{
     overflow-y: scroll;
+    padding: 0;
 }
 .WrapperMessageChat{
     display: flex;
     align-items: center;
-    max-width: 540px;
-    width: 100%;
     margin-top: 40px;
 }
 .WrapperMessageChat:first-child{
@@ -134,8 +141,10 @@
     padding-left: 22px;
     padding-bottom: 22px;
     border-radius: 15px;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     margin-bottom: 15px;
+    max-width: 540px;
+    margin-left: 23px;
 }
 .MessageText p{
     margin: 0;
@@ -143,6 +152,11 @@
     line-height: 28px;
     font-size: 16px;
     margin-right: 25px;
+}
+.InboxChat{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .ChatMessage span {
     color: #9ca1b2;

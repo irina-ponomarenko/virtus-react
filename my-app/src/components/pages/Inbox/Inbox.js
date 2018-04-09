@@ -7,12 +7,25 @@ import ChatList from './ChatList';
 import UserInfoList from './UserInfoList';
 import Profile5 from '../../../assets/image/profileImg-5.png';
 import Profile1 from '../../../assets/image/profileImg.png';
+import BigProphileIcon from '../../../assets/image/big_prophile.png';
 
 const fullList = [
     {
         userInfo: {
-            username: 'ss',
-            desc: 'dddds'
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Lyall Roach',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
+            emailTitle: 'Email',
+            email: 'lyallroach@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
+
         },
         listMsg: [{
             username: "Kevin Hsu",
@@ -128,8 +141,8 @@ class Inbox extends React.Component{
                 </header>
                 <div className="WrapperContentChat">
                     <InboxLis/>
-                    <ChatList listMessage={this.list.listMsg} />
-                    <UserInfoList/>
+                    <ChatList listMessage={this.list.listMsg}  />
+                    <UserInfoList listUsersInfo={this.list.userInfo}/>
                 </div>
             </div>
         );

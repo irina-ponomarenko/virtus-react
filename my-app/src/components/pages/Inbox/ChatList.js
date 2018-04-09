@@ -67,13 +67,15 @@ class ChatList extends React.Component{
                     {
                         this.state.chats.map((item,index)=>{
                             return(
-                                <li className={`WrapperMessageChat ${username === item.username ? "NextUserMessage" : " "}`} key={index}>
-                                    <img src={item.img}/>
-                                    <div className="ChatMessage">
-                                        <div className="MessageText">
-                                            <p>{item.content}</p>
+                                <li className="WrapperMessageChat" key={index}>
+                                    <div className={`InboxChat ${username === item.username ? "NextUserMessage" : " "}`}>
+                                        <img src={item.img}/>
+                                        <div className="ChatMessage">
+                                            <div className="MessageText">
+                                                <p>{item.content}</p>
+                                            </div>
+                                            <span>{item.date.getDate()} {listMonth[item.date.getMonth()]} {item.date.getFullYear()}, {item.date.getHours()}:{item.date.getMinutes()}:{item.date.getSeconds()}</span>
                                         </div>
-                                        <span>{item.date.getDate()} {listMonth[item.date.getMonth()]} {item.date.getFullYear()}, {item.date.getHours()}:{item.date.getMinutes()}:{item.date.getSeconds()}</span>
                                     </div>
                                 </li>
                             )
