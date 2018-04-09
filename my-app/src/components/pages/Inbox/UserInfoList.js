@@ -1,5 +1,4 @@
 import React from 'react';
-import BigProphileIcon from '../../../assets/image/big_prophile.png';
 
 class UserInfoList extends React.Component{
     constructor(props) {

@@ -42,7 +42,7 @@ class TableList extends  React.Component{
                 title: 'Status',
                 chevron: 'fa-chevron-down'
             }
-        ]
+        ];
 
         this.state = {
             tableList: [

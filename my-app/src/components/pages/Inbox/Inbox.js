@@ -8,6 +8,7 @@ import UserInfoList from './UserInfoList';
 import Profile5 from '../../../assets/image/profileImg-5.png';
 import Profile1 from '../../../assets/image/profileImg.png';
 import BigProphileIcon from '../../../assets/image/big_prophile.png';
+import BigProphileIcon2 from '../../../assets/image/big_prophile2.png';
 
 const fullList = [
     {
@@ -27,7 +28,7 @@ const fullList = [
             organization: 'Symu.co'
         },
         listMsg: [{
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'Hello World!',
             img: Profile5,
             date: new Date()
@@ -37,7 +38,7 @@ const fullList = [
             img: Profile1,
             date: new Date()
         }, {
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'Check out my Github at https://github.com/WigoHunter',
             img: Profile5,
             date: new Date()
@@ -51,9 +52,9 @@ const fullList = [
     {
         userInfo: {
             class: 'fa-circle fa-2x',
-            profileIcon: BigProphileIcon,
+            profileIcon: BigProphileIcon2,
             titleSpan: 'UX/UI Designer',
-            userName: 'Lyall Roach',
+            userName: 'Rey Colin',
             desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
             emailTitle: 'Email',
             email: 'lyallroach@gmail.com',
@@ -65,7 +66,7 @@ const fullList = [
             organization: 'Symu.co'
         },
         listMsg: [{
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'Hello World!',
             img: Profile5,
             date: new Date()
@@ -85,17 +86,17 @@ const fullList = [
             img: Profile1,
             date: new Date()
         }, {
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'So',
             img: Profile5,
             date: new Date()
         }, {
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'Chilltime is going to be an app for you to view videos with friends',
             img: Profile5,
             date: new Date()
         }, {
-            username: "Kevin Hsu",
+            username: "Lyall Roach",
             content: 'You can sign-up now to try out our private beta!',
             img: Profile5,
             date: new Date()
