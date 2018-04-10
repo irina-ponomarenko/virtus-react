@@ -7,19 +7,25 @@ import ChatList from './ChatList';
 import UserInfoList from './UserInfoList';
 import Profile5 from '../../../assets/image/profileImg-5.png';
 import Profile1 from '../../../assets/image/profileImg.png';
+import Profile2 from '../../../assets/image/profileImg-2.png';
+import Profile3 from '../../../assets/image/profileImg-3.png';
+import Profile4 from '../../../assets/image/profileImg-4.png';
 import BigProphileIcon from '../../../assets/image/big_prophile.png';
-import BigProphileIcon2 from '../../../assets/image/big_prophile2.png';
+import BigProphileIcon1 from '../../../assets/image/big_prophile1.png';
+import BigProphileIcon5 from '../../../assets/image/big_prophile5.png';
+import BigProphileIcon4 from '../../../assets/image/big_prophile4.png';
+
 
 const fullList = [
     {
         userInfo: {
             class: 'fa-circle fa-2x',
-            profileIcon: BigProphileIcon,
+            profileIcon: BigProphileIcon1,
             titleSpan: 'UX/UI Designer',
-            userName: 'Lyall Roach',
+            userName: 'Michelle Stewart',
             desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
             emailTitle: 'Email',
-            email: 'lyallroach@gmail.com',
+            email: 'michelle@gma1il.com',
             phoneTitle: 'Phone',
             phone: '+48 500 400 300',
             adressTitle: 'Adress',
@@ -28,22 +34,22 @@ const fullList = [
             organization: 'Symu.co'
         },
         listMsg: [{
-            username: "Lyall Roach",
+            username: "Michelle Stewart",
             content: 'Hello World!',
-            img: Profile5,
+            img: Profile2,
             date: new Date()
         }, {
-            username: "Alice Chen",
+            username: "Rey Colin",
             content: 'Love it! :heart:',
             img: Profile1,
             date: new Date()
         }, {
-            username: "Lyall Roach",
+            username: "Michelle Stewart",
             content: 'Check out my Github at https://github.com/WigoHunter',
-            img: Profile5,
+            img: Profile2,
             date: new Date()
         }, {
-            username: "KevHs",
+            username: "Rey Colin",
             content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
             img: Profile1,
             date: new Date()
@@ -52,12 +58,12 @@ const fullList = [
     {
         userInfo: {
             class: 'fa-circle fa-2x',
-            profileIcon: BigProphileIcon2,
+            profileIcon: BigProphileIcon5,
             titleSpan: 'UX/UI Designer',
-            userName: 'Rey Colin',
+            userName: 'Jolene Slater',
             desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
             emailTitle: 'Email',
-            email: 'lyallroach@gmail.com',
+            email: 'jolene@gmail.com',
             phoneTitle: 'Phone',
             phone: '+48 500 400 300',
             adressTitle: 'Adress',
@@ -66,9 +72,9 @@ const fullList = [
             organization: 'Symu.co'
         },
         listMsg: [{
-            username: "Lyall Roach",
+            username: "Jolene Slater",
             content: 'Hello World!',
-            img: Profile5,
+            img: Profile3,
             date: new Date()
         }, {
             username: "Rey Colin",
@@ -76,9 +82,9 @@ const fullList = [
             img: Profile1,
             date: new Date()
         }, {
-            username: "Lyall Roach",
+            username: "Jolene Slater",
             content: 'Check out my Github at https://github.com/WigoHunter',
-            img: Profile5,
+            img: Profile3,
             date: new Date()
         }, {
             username: "Rey Colin",
@@ -86,52 +92,19 @@ const fullList = [
             img: Profile1,
             date: new Date()
         }, {
-            username: "Lyall Roach",
+            username: "Jolene Slater",
             content: 'So',
-            img: Profile5,
+            img: Profile3,
             date: new Date()
         }, {
-            username: "Lyall Roach",
+            username: "Jolene Slater",
             content: 'Chilltime is going to be an app for you to view videos with friends',
-            img: Profile5,
+            img: Profile3,
             date: new Date()
         }, {
-            username: "Lyall Roach",
+            username: "Jolene Slater",
             content: 'You can sign-up now to try out our private beta!',
-            img: Profile5,
-            date: new Date()
-        }, {
-            username: "Rey Colin",
-            content: 'Definitely! Sounds great!',
-            img: Profile1,
-            date: new Date()
-        }]
-    },
-    {
-        userInfo: {
-            class: 'fa-circle fa-2x',
-            profileIcon: BigProphileIcon2,
-            titleSpan: 'UX/UI Designer',
-            userName: 'Rey Colin',
-            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
-            emailTitle: 'Email',
-            email: 'lyallroach@gmail.com',
-            phoneTitle: 'Phone',
-            phone: '+48 500 400 300',
-            adressTitle: 'Adress',
-            adress: '65 Lorem St, Warsaw, PL',
-            organizationTitle: 'Organization',
-            organization: 'Symu.co'
-        },
-        listMsg: [{
-            username: "Lyall Roach",
-            content: 'Hello World!',
-            img: Profile5,
-            date: new Date()
-        }, {
-            username: "Rey Colin",
-            content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
-            img: Profile1,
+            img: Profile3,
             date: new Date()
         }, {
             username: "Rey Colin",
@@ -167,6 +140,44 @@ const fullList = [
             img: Profile1,
             date: new Date()
         }, {
+            username: "Rey Colin",
+            content: 'Definitely! Sounds great!',
+            img: Profile1,
+            date: new Date()
+        }]
+    },
+    {
+        userInfo: {
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon4,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Dominic Lynton',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
+            emailTitle: 'Email',
+            email: 'dominic@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
+        },
+        listMsg: [{
+            username: "Dominic Lyntonh",
+            content: 'Hello World!',
+            img: Profile4,
+            date: new Date()
+        }, {
+            username: "Rey Colin",
+            content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
+            img: Profile1,
+            date: new Date()
+        }, {
+            username: "Dominic Lyntonh",
+            content: 'Hello!',
+            img: Profile4,
+            date: new Date()
+        },{
             username: "Rey Colin",
             content: 'Definitely! Sounds great!',
             img: Profile1,

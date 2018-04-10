@@ -25,7 +25,6 @@ class ChatList extends React.Component{
     scrollToBot() {
         this.chats.scrollTop = this.chats.scrollHeight;
     }
-
     handlerMsg() {
         var sendButtom = this.sendButton.style;
 
@@ -36,7 +35,6 @@ class ChatList extends React.Component{
             sendButtom.display = "block";
         }
     }
-
     submitMessage(e){
         e.preventDefault();
         const newMessage = this.sendText.value.trim();
@@ -52,8 +50,15 @@ class ChatList extends React.Component{
             chats: newChatsList
         }, () => {
            this.sendText.value = "";
-        })
+        });
+
     }
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            chats: nextProps.listMessage
+        });
+    }
+
     render(){
         const username = "Rey Colin";
         const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augest'];
