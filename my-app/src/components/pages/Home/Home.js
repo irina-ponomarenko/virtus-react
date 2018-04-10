@@ -9,6 +9,8 @@ import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ListUser from './ListUser';
 import ListInBox from './ListInBox';
+import SelectCharts from '../atoms/SelectCharts';
+import BarChart from './BarChart';
 
 class Home extends React.Component {
     state = {
@@ -16,7 +18,10 @@ class Home extends React.Component {
     };
     onChange = date =>
         this.setState({ date });
+
+
     render(){
+        const forChartsrSelect =['Year', 'Month', 'Week'];
         return(
            <div className="WrapperAllPage">
                <div className="WrapperBlock MarginBottom">
@@ -50,7 +55,14 @@ class Home extends React.Component {
                </div>
                <div className="WrapperBlock MarginBottom">
                    <BoxWrapper className="PaddingNone">
-                       <ReactHighcharts config={HightchartsColumn}></ReactHighcharts>
+                       <div className="HeaderBarChart">
+                           <h2>Sales report</h2>
+                           <div className="WrapperSortSelect MarginNone">
+                               <h2>Show:</h2>
+                               <SelectCharts data={forChartsrSelect} className="SelectPage HeaderSelectCharts"/>
+                           </div>
+                       </div>
+                       <BarChart/>
                    </BoxWrapper>
                    <ListInBox/>
                    <div className="Container ContainerHeight">

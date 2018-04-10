@@ -171,3 +171,34 @@ button.react-calendar__tile:enabled:hover{
 .MarginBottom{
     margin-bottom: 20px;
 }
+.IncomingMessage{
+    position: absolute;
+    top: 47px;
+    background: #2f3242;
+    box-shadow: 1px 9px 40px 6px rgba(42,44,59,1);
+    max-width: 350px;
+    width: 100%;
+}
+.IncomingMessage .IconUser img{
+    margin-left: 0;
+}
+.HeaderBarChart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+.HeaderBarChart h2{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.HeaderSelectCharts{
+    background: #2f3242 !important;
+}
+.MarginNone{
+    margin-right: 0 !important;
+}

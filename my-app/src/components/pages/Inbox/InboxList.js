@@ -10,7 +10,7 @@ class InboxList extends React.Component{
         const InboxList = [
             {
                 icon: Profile2,
-                title: 'Michelle Stewart',
+                username: 'Michelle Stewart',
                 date: 'Today, 5:32 PM',
                 messageUser: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.',
                 class: '',
@@ -18,7 +18,7 @@ class InboxList extends React.Component{
             },
             {
                 icon: Profile3,
-                title: 'Jolene Slater',
+                username: 'Jolene Slater',
                 date: '10 April',
                 messageUser: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
                 class: '',
@@ -26,7 +26,7 @@ class InboxList extends React.Component{
             },
             {
                 icon: Profile5,
-                title: 'Lyall Roach',
+                username: 'Lyall Roach',
                 date: '8 April',
                 messageUser: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
                 class: 'OldMessage',
@@ -34,7 +34,7 @@ class InboxList extends React.Component{
             },
             {
                 icon: Profile4,
-                title: 'Dominic Lynton',
+                username: 'Dominic Lynton',
                 date: '2 April',
                 messageUser: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
                 class: 'OldMessage',
@@ -51,7 +51,7 @@ class InboxList extends React.Component{
                                     <div className="WrapperTitleMessage">
                                         <div className="IconTitleMessage">
                                             <img src={item.icon} alt="Profile"/>
-                                            <h2>{item.title}</h2>
+                                            <h2>{item.username}</h2>
                                         </div>
                                         <span className={item.class}>{item.date}</span>
                                     </div>

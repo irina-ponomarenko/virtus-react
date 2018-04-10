@@ -3,9 +3,29 @@ import './Menu.css';
 import Logo from '../../../assets/image/logo.png';
 import ProfileTopMenu from  './ProfileTopMenu';
 import Search from './Search';
+import IncomingMessage from '../Home/IncomingMessage';
 
 class TopMenu extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            dropdownOpen: false
+        };
+    }
+    toggleClick = () => {
+        this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+        });
+    };
     render(){
+        let DropdownContent;
+        if (this.state.dropdownOpen) {
+            DropdownContent = (
+                <div className="IncomingMessage">
+                    <IncomingMessage/>
+                </div>
+            )
+        }
         let updateTime = function(){
             document.getElementById("NewMessageBell").style.display = "block"
         };
@@ -22,10 +42,12 @@ class TopMenu extends React.Component{
                             <i className="fa fa-plus"></i>
                         </button>
                         <Search/>
-                        <button type="button" className="buttonProject"><i className="fa fa-bell"></i>
+                        <button type="button" className="buttonProject" onClick={this.toggleClick}>
+                            <i className="fa fa-bell"></i>
                             <div className="NewMessageBell" id="NewMessageBell">
                             </div>
                         </button>
+                        {DropdownContent}
                         <ProfileTopMenu history={this.props.history}/>
                     </div>
                 </div>

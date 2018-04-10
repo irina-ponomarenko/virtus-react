@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
+    "chart.js": "^2.7.2",
     "font-awesome": "^4.7.0",
     "material-ui": "^0.20.0",
     "material-ui-pagination": "^1.1.6",
@@ -11,6 +12,7 @@
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-calendar": "^2.13.5",
+    "react-chartjs-2": "^2.7.0",
     "react-circular-progressbar": "^0.8.0",
     "react-dom": "^16.2.0",
     "react-highcharts": "^16.0.2",
