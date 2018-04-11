@@ -4,7 +4,6 @@ import Calendar from 'react-calendar';
 import BoxWrapper from '../atoms/BoxWrapper';
 import ReactHighcharts from 'react-highcharts';
 import AreaChart from '../../../config/AreaChart.config';
-import HightchartsColumn from '../../../config/ColumnChart.config';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ListUser from './ListUser';
@@ -21,7 +20,8 @@ class Home extends React.Component {
 
 
     render(){
-        const forChartsrSelect =['Year', 'Month', 'Week'];
+        const forChartsSelect =['Year', 'Month', 'Week'];
+
         return(
            <div className="WrapperAllPage">
                <div className="WrapperBlock MarginBottom">
@@ -59,7 +59,7 @@ class Home extends React.Component {
                            <h2>Sales report</h2>
                            <div className="WrapperSortSelect MarginNone">
                                <h2>Show:</h2>
-                               <SelectCharts data={forChartsrSelect} className="SelectPage HeaderSelectCharts"/>
+                               <SelectCharts data={forChartsSelect} className="SelectPage HeaderSelectCharts"/>
                            </div>
                        </div>
                        <BarChart/>

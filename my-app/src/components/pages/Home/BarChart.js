@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Bar } from 'react-chartjs-2';
 
 const chart1 = {
@@ -68,7 +67,13 @@ const chart3 = {
 
 
 const Button = (props) => (
-    <button id="update-chart" onClick={props.handleOnClick}>Update</button>
+    <button id="update-chart" onClick={props.handleOnClick}>Years</button>
+);
+const Button2 = (props) => (
+    <button id="update-chart2" onClick={props.handleOnClick}>Month</button>
+);
+const Button3 = (props) => (
+    <button id="update-chart3" onClick={props.handleOnClick}>Week</button>
 );
 
 class App extends React.Component {
@@ -83,7 +88,7 @@ class App extends React.Component {
     }
 
     handleUpdate() {
-        const chartData = chart1;
+        const chartData  = chart1;
 
         this.setState({chartData});
     }
@@ -101,8 +106,8 @@ class App extends React.Component {
             <div>
                 <Bar data={this.state.chartData} width={650} height={335} />
                 <Button handleOnClick={this.handleUpdate} />
-                <Button handleOnClick={this.handleUpdate2} />
-                <Button handleOnClick={this.handleUpdate3} />
+                <Button2 handleOnClick={this.handleUpdate2} />
+                <Button3 handleOnClick={this.handleUpdate3} />
             </div>
         );
     }
