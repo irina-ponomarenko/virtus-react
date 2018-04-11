@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import { connect } from 'react-redux';
 
 const chart1 = {
     labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
@@ -66,50 +67,38 @@ const chart3 = {
 };
 
 
-const Button = (props) => (
-    <button id="update-chart" onClick={props.handleOnClick}>Years</button>
-);
-const Button2 = (props) => (
-    <button id="update-chart2" onClick={props.handleOnClick}>Month</button>
-);
-const Button3 = (props) => (
-    <button id="update-chart3" onClick={props.handleOnClick}>Week</button>
-);
-
-class App extends React.Component {
+class BarChart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartData: chart1,chart2,chart3,
+            chartData: chart1
         };
-        this.handleUpdate = this.handleUpdate.bind(this);
-        this.handleUpdate2 = this.handleUpdate2.bind(this);
-        this.handleUpdate3 = this.handleUpdate3.bind(this);
     }
 
-    handleUpdate() {
-        const chartData  = chart1;
-
-        this.setState({chartData});
+    handleUpdate(e) {
+        this.setState({
+            chartData: e.target.value
+        });
     }
-    handleUpdate2() {
-        const chartData = chart2;
-        this.setState({chartData});
-    }
-    handleUpdate3() {
-        const chartData = chart3;
-        this.setState({chartData});
-    }
-
     render() {
+        let chartSort;
+        if (this.props.status === 'Year'){
+            chartSort = chart1;
+        }
+        else   if (this.props.status === 'Month'){
+            chartSort = chart2;
+        }
+        else   if (this.props.status === 'Week'){
+            chartSort = chart3;
+        }
         return(
-            <div>
-                <Bar data={this.state.chartData} width={650} height={335} />
-                <Button handleOnClick={this.handleUpdate} />
-                <Button2 handleOnClick={this.handleUpdate2} />
-                <Button3 handleOnClick={this.handleUpdate3} />
-            </div>
+            <Bar data={chartSort} width={650} height={335} />
         );
     }
 }
-export default App ;
+const mapState = (state, props) => {
+    return {
+        status: state.status
+    }
+};
+export default connect (mapState) (BarChart) ;

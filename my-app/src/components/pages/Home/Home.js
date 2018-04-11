@@ -8,15 +8,16 @@ import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ListUser from './ListUser';
 import ListInBox from './ListInBox';
-import SelectCharts from '../atoms/SelectCharts';
+import SelectCharts from '../atoms/SelectSort';
 import BarChart from './BarChart';
 
 class Home extends React.Component {
     state = {
         date: new Date(),
     };
-    onChange = date =>
-        this.setState({ date });
+    onChange = (date) =>
+        this.setState({
+            date });
 
 
     render(){

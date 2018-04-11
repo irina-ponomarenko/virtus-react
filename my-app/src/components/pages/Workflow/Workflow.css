@@ -106,6 +106,7 @@
 }
 .ProjectList{
     padding: 0;
+    min-height: 200px;
 }
 .AllProject{
     display: flex;

@@ -7,9 +7,45 @@ import ReactHighcharts from 'react-highcharts';
 import AreaChart from '../../../config/AreaChart.config';
 import Select from '../atoms/Select';
 import TableList from './TableList';
+import { connect } from 'react-redux';
+
+const chartYear ={
+    name: 'Dominic Lynton',
+    data: [3, 2, 6, 3, 5, 8, 10],
+};
+const chartMonth ={
+    name: 'Dominic Lynton',
+    data: [3, 4, 3, 5, 4, 10, 12],
+};
+const chartWeek ={
+    name: 'Dominic Lynton',
+    data: [1, 5, 3, 8, 4, 12, 10],
+};
+AreaChart.series = chartYear.data;
 
 class Raport extends  React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            chartData: chartYear
+        };
+    }
+    handleUpdate(e) {
+        this.setState({
+            chartData: e.target.value
+        });
+    }
     render(){
+        let areaSort;
+        if (this.props.status === 'Year'){
+            areaSort = chartYear;
+        }
+        else  if (this.props.status === 'Month'){
+            areaSort = chartMonth;
+        }
+        else  if (this.props.status === 'Week'){
+            areaSort = chartWeek;
+        }
         const forHeaderSelect = ["Week","Month","Year"];
         return(
             <div className="WrapperBlock PositionBlock">
@@ -50,4 +86,9 @@ class Raport extends  React.Component{
         );
     }
 }
-export  default Raport;
+const mapState = (state, props) => {
+    return {
+        status: state.status
+    }
+};
+export default connect (mapState) (Raport);
