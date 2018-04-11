@@ -21,7 +21,7 @@ const chartWeek ={
     name: 'Dominic Lynton',
     data: [1, 5, 3, 8, 4, 12, 10],
 };
-AreaChart.series = chartYear.data;
+AreaChart.series = chartYear;
 
 class Raport extends  React.Component{
     constructor(props) {

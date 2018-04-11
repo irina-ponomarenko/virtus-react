@@ -29,7 +29,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
          if (this.state.dropdownOpen) {
              DropdownContent = (
                  <div className="DropDownUser">
-                     <Link to="">
+                     <Link to="/settings">
                          <i className="fa fa-cogs" aria-hidden="true"></i>
                          Setting
                      </Link>

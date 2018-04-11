@@ -212,11 +212,11 @@ class Inbox extends React.Component{
                             <i className="fa fa-inbox" aria-hidden="true"></i>
                             <h2>Inbox (2)</h2>
                         </Link>
-                        <Link  to=" " className="activeLink marginLink">
+                        <Link  to="/send" className="activeLink marginLink">
                             <i className="fa fa-paper-plane" aria-hidden="true"></i>
                             <h2>Sent</h2>
                         </Link>
-                        <Link  to=" " className="activeLink marginLink">
+                        <Link  to="/trash" className="activeLink marginLink">
                             <i className="fa fa-trash" aria-hidden="true"></i>
                             <h2>Trash</h2>
                         </Link>

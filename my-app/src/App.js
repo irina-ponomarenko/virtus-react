@@ -9,6 +9,9 @@ import Workflow from "./components/pages/Workflow/Workflow";
 import Users from "./components/pages/Users/Users";
 import Raport from "./components/pages/Raport/Raport";
 import Inbox from "./components/pages/Inbox/Inbox";
+import Send from "./components/pages/Inbox/Send";
+import Trash from "./components/pages/Inbox/Trash";
+import Settings from "./components/pages/Home/Settings";
 import NotFound from "./components/pages/NotFound";
 import AllProject from "./components/pages/Workflow/AllProject";
 
@@ -27,6 +30,9 @@ const App = () =>{
                 <PrivateLayout exact path="/all_project" component={AllProject}/>
                 <PrivateLayout exact path="/raport" component={Raport}/>
                 <PrivateLayout exact path="/inbox/:counter?" component={Inbox}/>
+                <PrivateLayout exact path="/send" component={Send}/>
+                <PrivateLayout exact path="/trash" component={Trash}/>
+                <PrivateLayout exact path="/settings" component={Settings}/>
                 <PrivateLayout exact path="/users" component={Users}/>
 
                 <Route component={NotFound} />
