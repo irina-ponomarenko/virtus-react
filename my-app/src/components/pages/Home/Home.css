@@ -186,9 +186,9 @@ button.react-calendar__tile:enabled:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
     padding-bottom: 0;
-    padding-top: 20px;
 }
 .HeaderBarChart h2{
     color: #fff;
@@ -201,4 +201,73 @@ button.react-calendar__tile:enabled:hover{
 }
 .MarginNone{
     margin-right: 0 !important;
+}
+.ContainerWrapper{
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width: 1470px) and (min-width: 375px){
+    .Container{
+        max-width: 100%;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 1370px) and (min-width: 375px){
+    .AboutCircular p{
+        font-size: 14px !important;
+    }
+    .WrapperCircular{
+        margin-left: 0 !important;
+        width: auto !important;
+    }
+    .WrapperBlock{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 1065px) and (min-width: 375px){
+    .AboutCircular{
+        margin-left: 15px;
+    }
+    .AboutCircular p{
+        font-size: 14px !important;
+    }
+    .WrapperCircular{
+        margin-left: 5px !important;
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 375px){
+    .ContainerWrapper{
+        flex-wrap: wrap !important;
+    }
+    .ContainerWrapper{
+        display: flex;
+    }
+}
+@media screen and (max-width: 885px) and (min-width: 375px){
+    .AboutCircular{
+        margin-left: 15px !important;
+    }
+}
+@media screen and (max-width: 834px) and (min-width: 375px){
+    .WrapperAllPage{
+        margin: 52px 20px 0px 52px;
+    }
+}
+@media screen and (max-width: 799px) and (min-width: 375px){
+    .CircularInfo{
+        flex-direction: column;
+    }
+    .AboutCircular{
+        margin-top: 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .BoxWrapper--Margin{
+        max-width: 800px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 745px) and (min-width: 375px){
+
 }

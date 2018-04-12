@@ -65,12 +65,14 @@ class Home extends React.Component {
                        </div>
                        <BarChart/>
                    </BoxWrapper>
-                   <ListInBox/>
-                   <div className="Container ContainerHeight">
-                       <Calendar
-                           onChange={this.onChange}
-                           value={this.state.date}
-                       />
+                   <div className="ContainerWrapper">
+                       <ListInBox/>
+                       <div className="Container ContainerHeight">
+                           <Calendar
+                               onChange={this.onChange}
+                               value={this.state.date}
+                           />
+                       </div>
                    </div>
                </div>
             </div>

@@ -78,16 +78,16 @@ class BarChart extends React.Component {
     render() {
         let chartSort;
         if (this.props.status === 'Year'){
-            chartSort = chart1;
+            chartSort = Object.assign({},chart1);
         }
         else   if (this.props.status === 'Month'){
-            chartSort = chart2;
+            chartSort = Object.assign({},chart2);
         }
         else   if (this.props.status === 'Week'){
-            chartSort = chart3;
+            chartSort = Object.assign({},chart3);
         }
         else {
-            chartSort = chart1;
+            chartSort = Object.assign({},chart1);
         }
         return(
             <Bar data={chartSort} width={650} height={335} />
