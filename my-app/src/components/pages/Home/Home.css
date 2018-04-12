@@ -206,6 +206,12 @@ button.react-calendar__tile:enabled:hover{
     display: flex;
     width: 100%;
 }
+.SettingTitle h2{
+    font-size: 36px;
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 @media screen and (max-width: 1470px) and (min-width: 375px){
     .Container{
         max-width: 100%;

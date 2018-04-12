@@ -1,11 +1,11 @@
 .WrapperContentChat{
     display: flex;
 }
-.marginLink{
+.marginLink a{
     display: flex;
     align-items: center;
 }
-.marginLink i{
+.marginLink a i{
     margin-right: 10px;
 }
 .IconTitleMessage img{
@@ -285,4 +285,26 @@ a.PreviewMessage p{
 
 .WriteMessage button img{
     width: 20px;
+}
+.SendBox, .TrashBox{
+    max-width: 100%;
+}
+.SendPreview{
+    width: 100%;
+    padding-right: 0%;
+    padding-left: 0;
+}
+.SendMessage{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.MessageSend, .MessageTrash{
+    color: #9ca1b2;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 28px;
+}
+.activeLinkInbox{
+    color: #000 !important;
 }

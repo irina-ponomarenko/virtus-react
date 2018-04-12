@@ -16,7 +16,7 @@ class Settings extends React.Component {
     render(){
         return(
            <div className="WrapperAllPage">
-               <div className="WrapperBlock MarginBottom">
+               <div className="WrapperBlock MarginBottom SettingTitle">
                    <h2>Settings</h2>
                </div>
             </div>

@@ -61,7 +61,7 @@ class ChatList extends React.Component{
 
     render(){
         const username = "Rey Colin";
-        const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augest'];
+        const listMonth = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august'];
         const { chats } = this.state;
 
 

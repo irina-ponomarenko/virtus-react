@@ -1,7 +1,7 @@
 import React  from 'react';
 import './Inbox.css';
 import Select from '../atoms/Select';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import InboxLis from './InboxList';
 import ChatList from './ChatList';
 import UserInfoList from './UserInfoList';
@@ -43,6 +43,11 @@ const fullList = [
             content: 'Love it! :heart:',
             img: Profile1,
             date: new Date()
+        },{
+            username: "Rey Colin",
+            content: 'Love it!',
+            img: Profile1,
+            date: new Date()
         }, {
             username: "Michelle Stewart",
             content: 'Check out my Github at https://github.com/WigoHunter',
@@ -53,7 +58,12 @@ const fullList = [
             content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
             img: Profile1,
             date: new Date()
-        }]
+        }, {
+            username: "Michelle Stewart",
+            content: 'Check out my Github!',
+            img: Profile2,
+            date: new Date()
+        },]
     },
     {
         userInfo: {
@@ -134,17 +144,38 @@ const fullList = [
             content: 'Hello World!',
             img: Profile5,
             date: new Date()
-        }, {
+        },
+            {
             username: "Rey Colin",
             content: 'Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
             img: Profile1,
             date: new Date()
-        }, {
+        },
+        {
+            username: "Lyall Roach",
+            content: 'Lorem ipsum dolor sit amet, nibh ipsum.',
+            img: Profile5,
+            date: new Date()
+        },
+        {
+            username: "Rey Colin",
+            content: 'Lorem ipsum dolor sit amet, nibh ipsum.  Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.',
+            img: Profile1,
+            date: new Date()
+        },
+        {
+            username: "Lyall Roach",
+            content: 'Lorem ipsum ',
+            img: Profile5,
+            date: new Date()
+        },
+        {
             username: "Rey Colin",
             content: 'Definitely! Sounds great!',
             img: Profile1,
             date: new Date()
-        }]
+        },
+        ]
     },
     {
         userInfo: {
@@ -207,19 +238,19 @@ class Inbox extends React.Component{
         return(
             <div className="WrapperProject">
                 <header className="PageHeader">
-                    <div className="TitleHeader">
-                        <Link to=" " className="marginLink">
+                    <div className="TitleHeader marginLink">
+                        <NavLink exact to="/inbox/:counter?"  activeClassName="activeLinkInbox">
                             <i className="fa fa-inbox" aria-hidden="true"></i>
                             <h2>Inbox (2)</h2>
-                        </Link>
-                        <Link  to="/send" className="activeLink marginLink">
+                        </NavLink>
+                        <NavLink exact to="/send" activeClassName="activeLinkInbox">
                             <i className="fa fa-paper-plane" aria-hidden="true"></i>
                             <h2>Sent</h2>
-                        </Link>
-                        <Link  to="/trash" className="activeLink marginLink">
+                        </NavLink>
+                        <NavLink exact to="/trash"  activeClassName="activeLinkInbox">
                             <i className="fa fa-trash" aria-hidden="true"></i>
                             <h2>Trash</h2>
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="ButtonHeader">
                         <h2>Filter messages:</h2>
