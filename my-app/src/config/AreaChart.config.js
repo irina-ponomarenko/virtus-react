@@ -15,7 +15,9 @@ const Highcharts = {
             'Tuesday',
             'Wednesday',
             'Thursday',
-            'Friday'
+            'Friday',
+            'Saturday',
+            'Sunday'
         ],
         minorGridLineWidth: 0,
         gridLineWidth: 1,

@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 const chartYear = [{
     name: 'Dominic Lynton',
     data: [3, 2, 6, 3, 5, 8, 10],
-    }];
+}];
 
 const chartMonth =[{
     name: 'Dominic Lynton',
