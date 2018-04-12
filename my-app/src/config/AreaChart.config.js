@@ -46,7 +46,7 @@ const Highcharts = {
     },
     plotOptions: {
         areaspline: {
-            fillOpacity: 0,
+            fillOpacity: 0.3,
         },
         series: {
             allowPointSelect: true
