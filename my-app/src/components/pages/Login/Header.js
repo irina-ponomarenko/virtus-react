@@ -7,9 +7,7 @@ class HeaderLogin extends  React.Component {
         return(
             <div className="HeaderLogin">
                 <div className="WrapperTabs">
-                    <div className="Logo LogoPageLogin">
-                        <img src={Logo} alt="Logo"/>
-                    </div>
+
                     <Tabs history={this.props.history}/>
                 </div>
             </div>

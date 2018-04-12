@@ -169,6 +169,12 @@ a.PreviewMessage p{
     display: flex;
     justify-content: flex-end;
 }
+.FormWrapper img{
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
 .NewBackground{
     background: #2196f3;
     border-radius: 15px;

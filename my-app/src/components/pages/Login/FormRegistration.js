@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../../assets/image/logo.png';
 
 class FormRegistration extends  React.Component {
     constructor(props) {
@@ -37,6 +38,7 @@ class FormRegistration extends  React.Component {
     render() {
         return(
             <div className="FormWrapper">
+                <img src={Logo}/>
                 <h2>Register</h2>
                 <form className="form-signin" onSubmit={this.collectUserData}>
                     <div className="form-group">
