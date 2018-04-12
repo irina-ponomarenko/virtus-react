@@ -75,11 +75,6 @@ class BarChart extends React.Component {
         };
     }
 
-    handleUpdate(e) {
-        this.setState({
-            chartData: e.target.value
-        });
-    }
     render() {
         let chartSort;
         if (this.props.status === 'Year'){
@@ -90,6 +85,9 @@ class BarChart extends React.Component {
         }
         else   if (this.props.status === 'Week'){
             chartSort = chart3;
+        }
+        else {
+            chartSort = chart1;
         }
         return(
             <Bar data={chartSort} width={650} height={335} />

@@ -9,18 +9,20 @@ import Select from '../atoms/Select';
 import TableList from './TableList';
 import { connect } from 'react-redux';
 
-const chartYear ={
+const chartYear = [{
     name: 'Dominic Lynton',
     data: [3, 2, 6, 3, 5, 8, 10],
-};
-const chartMonth ={
+    }];
+
+const chartMonth =[{
     name: 'Dominic Lynton',
-    data: [3, 4, 3, 5, 4, 10, 12],
-};
-const chartWeek ={
+    data: [8, 4, 3, 5, 13, 10, 12],
+}];
+const chartWeek = [{
     name: 'Dominic Lynton',
     data: [1, 5, 3, 8, 4, 12, 10],
-};
+}];
+
 AreaChart.series = chartYear;
 
 class Raport extends  React.Component{
@@ -36,17 +38,17 @@ class Raport extends  React.Component{
         });
     }
     render(){
-        let areaSort;
+        const forHeaderSelect = ["Week","Month","Year"];
+
         if (this.props.status === 'Year'){
-            areaSort = chartYear;
+            AreaChart.series = chartYear;
         }
         else  if (this.props.status === 'Month'){
-            areaSort = chartMonth;
+            AreaChart.series = chartMonth;
         }
         else  if (this.props.status === 'Week'){
-            areaSort = chartWeek;
+            AreaChart.series = chartWeek;
         }
-        const forHeaderSelect = ["Week","Month","Year"];
         return(
             <div className="WrapperBlock PositionBlock">
                 <header className="HeaderGraph">
