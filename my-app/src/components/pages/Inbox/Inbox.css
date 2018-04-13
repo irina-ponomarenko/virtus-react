@@ -353,6 +353,7 @@ a.PreviewMessage p{
     .MessageText p{
         font-size: 12px;
         margin-right: 5px;
+        line-height: 16px;
     }
     .MessageText{
         padding-top: 12px;
@@ -384,5 +385,38 @@ a.PreviewMessage p{
     .WriteMessage i{
         font-size: 20px;
         margin-right: 10px;
+    }
+    .UserInfoChat{
+        margin-top: 20px;
+    }
+    .UserInfoChat img{
+        width: 70px;
+    }
+    .ProphileIconWrapper i{
+        font-size: 18px;
+    }
+    .TitleName h2{
+        font-size: 14px;
+        margin: 0;
+    }
+    .TitleName span{
+        font-size: 10px;
+    }
+    .TitleName{
+        margin-top: 10px;
+    }
+    .UserInfoChat p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .ContactInfo li span,
+    .ContactInfo li h3{
+        font-size: 12px;
+    }
+    .ContactInfo{
+        padding-left: 0;
+    }
+    .ContactInfo li{
+        margin-top: 15px;
     }
 }
