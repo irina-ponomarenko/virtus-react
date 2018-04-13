@@ -7,22 +7,32 @@ class LeftBar extends React.Component {
             {
                 Link: '/',
                 className: 'fa fa-home',
+                class: '',
+                id: ''
             },
             {
                 Link: '/all_project',
                 className: 'fa fa-bars',
+                class: '',
+                id: ''
             },
             {
                 Link: '/raport',
                 className: 'fa fa-line-chart',
+                class: '',
+                id: ''
             },
             {
                 Link: '/inbox',
                 className: 'fa fa-envelope',
+                class: 'NewMessage',
+                id: 'NewMessage'
             },
             {
                 Link: '/users',
-                className: 'fa fa-users'
+                className: 'fa fa-users',
+                class: '',
+                id: ''
             }
         ];
 
@@ -41,12 +51,11 @@ class LeftBar extends React.Component {
                                     exact to={item.Link}
                                     activeClassName="activeNav">
                                     <i className={item.className}></i>
+                                    <i className={item.class} id={item.id}></i>
                                 </NavLink>
                             </li>
                         )}
                     </ul>
-                    <div className="NewMessage" id="NewMessage">
-                    </div>
                 </div>
             </div>
         )

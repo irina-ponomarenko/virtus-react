@@ -125,3 +125,31 @@ div [value='b']{
     font-size: 14px;
     margin-right: 30px;
 }
+@media screen and (max-width: 420px) and (min-width: 375px){
+    .FormWrapper img{
+        max-width: 150px !important;
+    }
+    .FormWrapper h2{
+        font-size: 25px;
+    }
+    .form-group{
+        max-width: 300px !important;
+    }
+    .submitButton{
+        max-width: 200px !important;
+    }
+}
+@media screen and (max-width: 650px) and (min-width: 375px){
+    .FormWrapper img{
+        max-width: 250px !important;
+    }
+    .FormWrapper h2{
+        font-size: 35px;
+    }
+    .form-group{
+        max-width: 370px !important;
+    }
+    .submitButton{
+        max-width: 250px !important;
+    }
+}

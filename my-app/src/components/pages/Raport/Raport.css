@@ -130,3 +130,37 @@
 .StatusClass i{
     margin-right: 10px;
 }
+@media screen and (max-width: 548px) and (min-width: 375px){
+    .CircularProgressbar{
+        max-width: 45px;
+    }
+    .AboutCircular h2{
+        font-size: 14px;
+    }
+    .AboutCircular p{
+        font-size: 10px !important;
+    }
+    .WrapperSortSelect h2{
+        font-size: 14px;
+    }
+    .TableTitle th{
+        font-size: 14px;
+    }
+    .TableTitle th i{
+        font-size: 10px;
+    }
+    .TableTitle th{
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .TableInfo td h2{
+        font-size: 12px;
+    }
+    .StatusActive,
+    .StatusDisabled{
+        font-size: 10px !important;
+    }
+    .TableList{
+        overflow-x: scroll;
+    }
+}

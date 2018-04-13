@@ -226,3 +226,202 @@
 .BlueBorder{
     border-left: 4px solid dodgerblue;
 }
+@media screen and (max-width: 760px) and (min-width: 375px){
+    .PageHeader{
+        margin-top: 150px !important;
+    }
+}
+@media screen and (max-width: 685px) and (min-width: 375px){
+    .TitleHeader a h2{
+        font-size: 14px;
+    }
+    .TitleHeader{
+        margin-left: 30px;
+    }
+    .ButtonHeader h2{
+        font-size: 14px;
+    }
+    .AllProject{
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 568px) and (min-width: 375px){
+    .WrapperUserBlock{
+        padding: 15px !important;
+    }
+    .UserBlock .TitleUser h3{
+        font-size: 14px !important;
+    }
+    .UserBlock .TitleUser p{
+        font-size: 10px !important;
+    }
+    .SelectPage{
+        max-width: 100px !important;
+        width: 100%;
+    }
+    .PageHeader{
+        line-height: 54px;
+    }
+
+}
+@media screen and (max-width: 507px) and (min-width: 375px){
+    .ButtonHeader h2{
+        font-size: 12px;
+    }
+    .TitleHeader a h2{
+        font-size: 12px;
+    }
+    .titleList h2{
+        font-size: 14px;
+    }
+    .titleList p{
+        font-size: 10px;
+    }
+    .ButtonHeader h2{
+        margin-right: 15px;
+    }
+    .SelectPage{
+        max-width: 70px !important;
+        width: 100%;
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 375px){
+    .WrapperUserBlock{
+        padding: 10px !important;
+    }
+    .UserBlock .TitleUser h3{
+        font-size: 12px !important;
+    }
+    .UserBlock .TitleUser p{
+        font-size: 8px !important;
+    }
+    .IconUser img{
+        width: 26px;
+        height: 26px;
+    }
+    .IconUser{
+        margin-right: 10px;
+    }
+    .titleList h2{
+        font-size: 12px;
+    }
+    .titleList p{
+        font-size: 8px;
+    }
+    .WrapperList  i{
+        font-size: 10px;
+    }
+    .TitleHeader{
+        flex-direction: column;
+    }
+    .TitleHeader h2{
+        line-height: 10px;
+    }
+    .AllProjectList{
+        margin-top: 20px !important;
+        margin-left: 30px !important;
+        margin-right: 8px !important;
+    }
+    .ProjectUserList thead th:first-child{
+        padding-left: 25px !important;
+    }
+    .ProjectUserList thead th{
+        font-size: 12px;
+    }
+    .ProjectUserList td{
+        padding-right: 30px !important;
+    }
+    .BlueBorder .infoProject{
+
+    }
+    .ProjectUserList td:first-child{
+        padding-left: 25px !important;
+    }
+    .infoProject h2{
+        font-size: 12px;
+    }
+    .infoProject p{
+        font-size: 10px;
+    }
+    .valueProject h2,
+    .timeProject h2,
+    .statusProject h2,
+    .TitleUser h2{
+        font-size: 12px;
+    }
+    .react-sweet-progress{
+        width: 150px !important;
+    }
+}
+@media screen and (max-width: 510px) and (min-width: 375px){
+    .WrapperUserBlock{
+        padding: 20px !important;
+    }
+    .UserBlock .TitleUser h3{
+        font-size: 14px !important;
+    }
+    .UserBlock .TitleUser p{
+        font-size: 10px !important;
+    }
+    .IconUser img{
+        width: 35px;
+        height: 35px;
+    }
+    .IconUser{
+        margin-right: 15px;
+    }
+    .titleList h2{
+        font-size: 14px;
+    }
+    .titleList p{
+        font-size: 10px;
+    }
+    .WrapperList  i{
+        font-size: 14px;
+    }
+    .TitleHeader{
+        flex-direction: column;
+    }
+    .TitleHeader h2{
+        line-height: 14px;
+    }
+    .AllProjectList{
+        margin-top: 25px !important;
+        margin-left: 35px !important;
+        margin-right: 12px !important;
+    }
+    .ProjectUserList thead th:first-child{
+        padding-left: 35px !important;
+    }
+    .ProjectUserList thead th{
+        font-size: 14px;
+    }
+    .ProjectUserList td{
+        padding-right: 40px !important;
+    }
+    .BlueBorder .infoProject{
+
+    }
+    .ProjectUserList td:first-child{
+        padding-left: 35px !important;
+    }
+    .infoProject h2{
+        font-size: 14px;
+    }
+    .infoProject p{
+        font-size: 12px;
+    }
+    .valueProject h2,
+    .timeProject h2,
+    .statusProject h2,
+    .TitleUser h2{
+        font-size: 14px;
+    }
+    .react-sweet-progress{
+        width: 200px !important;
+    }
+}

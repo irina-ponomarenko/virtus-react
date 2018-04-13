@@ -319,3 +319,68 @@ a.PreviewMessage p{
 .NewConwersation span{
     margin-right: 20px;
 }
+@media screen and (max-width: 675px) and (min-width: 375px){
+    .IconTitleMessage h2{
+        font-size: 12px;
+    }
+    .WrapperTitleMessage span{
+        font-size: 8px;
+    }
+    .IconTitleMessage img{
+        width: 25px;
+    }
+    .WrapperPreview{
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+    }
+    .PreviewMessage p{
+        font-size: 12px !important;
+        line-height: 14px !important;
+        font-weight: 300;
+        margin-top: 10px !important;
+    }
+    .InboxList button{
+        font-size: 10px;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    .MessageText p{
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    .MessageText{
+        padding-top: 12px;
+        padding-left: 12px;
+        padding-bottom: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    .InboxChat img{
+        width: 30px;
+        border-radius: 30px;
+    }
+    .ChatMessage span{
+        font-size: 10px;
+    }
+    .ChatList{
+        padding: 10px 20px;
+    }
+    .WriteMessage{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    #Message{
+        font-size: 12px;
+    }
+    .WriteMessage i{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
