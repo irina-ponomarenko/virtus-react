@@ -213,7 +213,25 @@ const fullList = [
             content: 'Definitely! Sounds great!',
             img: Profile1,
             date: new Date()
-        }]
+        },]
+    },
+    {
+        userInfo: {
+            class: 'fa-circle fa-2x',
+            profileIcon: BigProphileIcon5,
+            titleSpan: 'UX/UI Designer',
+            userName: 'Lu Scot',
+            desc: 'Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad',
+            emailTitle: 'Email',
+            email: 'dominic@gmail.com',
+            phoneTitle: 'Phone',
+            phone: '+48 500 400 300',
+            adressTitle: 'Adress',
+            adress: '65 Lorem St, Warsaw, PL',
+            organizationTitle: 'Organization',
+            organization: 'Symu.co'
+        },
+        listMsg: []
     }
 ];
 
@@ -230,6 +248,9 @@ class Inbox extends React.Component{
         }
         else if (this.props.match.params.counter === '4') {
             this.list = fullList[3];
+        }
+        else if (this.props.match.params.counter === '5') {
+            this.list = fullList[4];
         }
         else {
             this.list = fullList[0];

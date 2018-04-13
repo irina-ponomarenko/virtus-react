@@ -308,3 +308,14 @@ a.PreviewMessage p{
 .activeLinkInbox{
     color: #000 !important;
 }
+.NewConwersation{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+.NewConwersation .IconTitleMessage{
+    margin-left: 60px;
+}
+.NewConwersation span{
+    margin-right: 20px;
+}
