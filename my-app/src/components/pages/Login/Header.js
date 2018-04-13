@@ -7,7 +7,6 @@ class HeaderLogin extends  React.Component {
         return(
             <div className="HeaderLogin">
                 <div className="WrapperTabs">
-
                     <Tabs history={this.props.history}/>
                 </div>
             </div>

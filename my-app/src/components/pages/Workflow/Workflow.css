@@ -422,6 +422,6 @@
         font-size: 14px;
     }
     .react-sweet-progress{
-        width: 200px !important;
+        width: 0px !important;
     }
 }

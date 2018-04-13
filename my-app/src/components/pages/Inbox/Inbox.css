@@ -421,4 +421,14 @@ a.PreviewMessage p{
     .ContactInfo li{
         margin-top: 15px;
     }
+    .NewConwersation{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .NewConwersation .IconTitleMessage{
+        margin-left: 15px;
+    }
+    .ButtonHeader h2{
+        line-height: 14px;
+    }
 }

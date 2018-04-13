@@ -82,3 +82,25 @@
 .PaginationWrapper div svg{
     fill: #fff !important;
 }
+@media screen and (max-width: 673px) and (min-width: 375px){
+    .WrapperUsers img{
+        width: 35px !important;
+        height: 35px !important;
+        margin-left: 10px;
+    }
+    .fioUser p{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .fioUser span{
+        font-size: 10px;
+    }
+    .statusUser,
+    .emailUser,
+    .phoneUsers{
+        font-size: 14px;
+    }
+    .WrapperAllPage{
+        overflow-x: scroll;
+    }
+}

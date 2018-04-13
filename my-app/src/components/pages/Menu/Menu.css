@@ -199,7 +199,7 @@
 .NewMessageBell{
     position: absolute;
     left: 52px;
-    top: 392px;
+    bottom: 100px;
     width: 12px;
     height: 12px;
     border-radius: 100%;
