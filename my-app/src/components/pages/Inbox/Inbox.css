@@ -1,5 +1,6 @@
 .WrapperContentChat{
     display: flex;
+    background-color: #2a2c3b;
 }
 .marginLink a{
     display: flex;
@@ -113,6 +114,7 @@ a.PreviewMessage p{
     border-radius: 15px;
     border-bottom-right-radius: 0;
     margin-right: 23px;
+    background: #2196f3;
 }
 .NextUserMessage span{
     display: flex;
